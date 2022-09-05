@@ -26,28 +26,28 @@ export const PlayerCard = () => {
                 </div>
                 <div className="stats-container" >
                     <div className="group">
-                        <div className="label">Position</div>
-                        <div className="description"></div>
+                        <h3 className="label">Position</h3>
+                        <span className="description"></span>
                     </div>
                     <div className='group'>
-                        <div className="label">Nationality</div>
-                        <div className="description"></div>
+                        <h3 className="label">Nationality</h3>
+                        <span className="description"></span>
                     </div>
                     <div className='group'>
-                        <div className="label">Age</div>
-                        <div className="description"></div>
+                        <h3 className="label">Age</h3>
+                        <span className="description"></span>
                     </div>
                     <div className='group'>
-                        <div className="label">DOB</div>
-                        <div className="description"></div>
+                        <h3 className="label">DOB</h3>
+                        <span className="description"></span>
                     </div>
                     <div className='group'>
-                        <div className="label">Height</div>
-                        <div className="description"></div>
+                        <h3 className="label">Height</h3>
+                        <span className="description"></span>
                     </div>
                     <div className='group'>
-                        <div className="label">Goals</div>
-                        <div className="description"></div>
+                        <h3 className="label">Goals</h3>
+                        <span className="description"></span>
                     </div>
                 </div>
             </div>
