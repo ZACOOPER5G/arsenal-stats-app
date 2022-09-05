@@ -36,12 +36,10 @@ body {
   bottom: 0px;
 }
   
-.player img {
+.player > img {
   width: 400px;
   position: absolute;
-  overflow: hidden;
-  left: -60px;
-  bottom: -60px;
+  top: 173px;
 }
 
 .player-name {
