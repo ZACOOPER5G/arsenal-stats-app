@@ -73,3 +73,25 @@ body {
   float: right;
   padding: 20px;
 }
+
+.group {
+  width: 175px;
+  display: inline-block;
+}
+
+.label {
+  font-size: 0.875rem;
+  letter-spacing: 3px;
+  color: #feee43;
+  text-transform: uppercase;
+  line-height: 1;
+  margin: 0 0 0.5em;
+}
+
+.label:first-child {
+  margin-top: 0px;
+}
+
+.description {
+  font-size: 1.25rem;
+}
