@@ -1,0 +1,12 @@
+[
+    {
+        "name": "Martin Odegaard",
+        "imageUrl": "/images/odegaard.png",
+        "position": "CAM",
+        "nationality": "Norway",
+        "age": "23",
+        "dob": "DD/MM/YYYY",
+        "height": "5'10\"",
+        "goals": "3"
+    }
+]
