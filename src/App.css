@@ -46,7 +46,8 @@ a {
   background-color: #191b21;
   margin: 1rem;
   padding: 1rem;
-  transform: translateY(-30%)
+  transform: translateY(-30%);
+  transition: filter 300ms;
 }
 
 .icon-button {
@@ -55,7 +56,13 @@ a {
   background-color: #191b21;
   border-radius: 50%;
   margin: 2px;
-  translate: -10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-item:hover {
+  filter: brightness(1.2)
 }
 
 .container {
