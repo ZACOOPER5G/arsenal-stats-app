@@ -61,7 +61,12 @@ export const DropdownMenu = () => {
             >
                  <div className='menu'>
                      
-
+                <DropdownItem
+                    goToMenu="main" 
+                    rightIcon={<Arrow style={{transform: "rotate(90deg)"}}/>}
+                >
+                    Return
+                </DropdownItem>
                 <DropdownItem 
                     goToMenu="main" 
                     leftIcon={ `👤` } 
