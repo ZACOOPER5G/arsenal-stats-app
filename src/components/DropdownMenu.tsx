@@ -17,8 +17,8 @@ const DropdownItem = (props: any) => {
 export const DropdownMenu = () => {
     return (
         <div className="dropdown">
-            <DropdownItem leftIcon={<ArsenalLogo/>} rightIcon={<Arrow/>}>Team Stats</DropdownItem>
-            <DropdownItem leftIcon={<PlayerIcon/>} rightIcon={<Arrow/>}>Player Stats</DropdownItem>
+            <DropdownItem leftIcon={<ArsenalLogo style={{transform:"scale(0.8, 0.8) translateY(0.4%)"}}/>} rightIcon={<Arrow style={{transform:"rotate(-90deg) scale(0.9, 0.9) translateX(3%) translateY(10%)"}}/>}>Team Stats</DropdownItem>
+            <DropdownItem leftIcon={ `👤` } rightIcon={<Arrow style={{transform:"rotate(-90deg) scale(0.9, 0.9) translateX(3%) translateY(10%)"}}/>}>Player Stats</DropdownItem>
         </div>
     )
 }
