@@ -8,6 +8,8 @@ export const NavItem = (props: any) => {
           <a href="#" className="icon-button" onClick={() => setOpen(!open)}>
               {props.icon}
           </a>
+
+          {open && props.children}
       </li>
     )
   }
