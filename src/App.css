@@ -1,9 +1,11 @@
 * {
   box-sizing: border-box;
+  font-family: 'Arsenal', sans-serif;
+  letter-spacing: 0.1rem;
 }
 
 body {
-  font-family: Montserrat;
+
   background-color: #DB0007 ;
   background-image: url("https://images5.alphacoders.com/115/1157178.png");
   background-size: cover;
