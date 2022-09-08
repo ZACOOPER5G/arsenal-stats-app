@@ -1,13 +1,21 @@
 import { ReactComponent as ArsenalLogo} from '../images/arsenal-logo.svg';
 // import { ReactComponent as PlayerIcon} from '../images/player-icon.svg';
 import { ReactComponent as Arrow} from '../images/arrow.svg';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { CSSTransition } from 'react-transition-group';
+import { useRef } from 'react';
+// import { ReactComponent as MartinIcon } from '../images/martin.svg'
 
 export const DropdownMenu = () => {
     const [activeMenu, setActiveMenu] = useState<string>('main');
 
     const [menuHeight, setMenuHeight] = useState(null);
+
+    const dropdownRef = useRef<any>(null);
+
+    useEffect(() => {
+        setMenuHeight(dropdownRef.current?.firstChild.offsetHeight)
+    }, [])
 
     const calcHeight = (el: any) => {
         const height = el.offsetHeight
@@ -69,9 +77,8 @@ export const DropdownMenu = () => {
                 </DropdownItem>
                 <DropdownItem 
                     goToMenu="main" 
-                    leftIcon={ `👤` } 
-                    rightIcon={<Arrow style={{transform:"rotate(-90deg) scale(0.9, 0.9) translateX(3%) translateY(10%)"}}
-                />}>
+                    leftIcon={ 'X' } 
+                  >
                     Martin Odegaard
                 </DropdownItem>
 
