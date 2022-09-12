@@ -6,12 +6,20 @@ import { CSSTransition } from 'react-transition-group';
 import { useRef } from 'react';
 // import { ReactComponent as MartinIcon } from '../images/martin.svg'
 
-export const DropdownMenu = () => {
+type DropdownMenuProps = {
+    currentPlayer: () => void
+}
+
+export const DropdownMenu = (props: any): any => {
     const [activeMenu, setActiveMenu] = useState<string>('main');
 
     const [menuHeight, setMenuHeight] = useState(null);
 
     const dropdownRef = useRef<any>(null);
+
+    const getCurrentPlayer = (e: any) => {
+        props.player(e.target.className)
+    }
 
     useEffect(() => {
         setMenuHeight(dropdownRef.current?.firstChild.offsetHeight)
@@ -76,10 +84,15 @@ export const DropdownMenu = () => {
                     Return
                 </DropdownItem>
                 <DropdownItem 
-                    goToMenu="main" 
                     leftIcon={ 'X' } 
+
                   >
-                    Martin Odegaard
+                    <p 
+                        className="martin-odegaard"
+                        onClick={getCurrentPlayer}
+                    >
+                        Martin Odegaard
+                    </p>
                 </DropdownItem>
 
                 </div>
