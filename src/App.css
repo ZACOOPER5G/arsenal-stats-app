@@ -306,3 +306,7 @@ a {
 .Xhaka {
   transform: translateX(5%) translateY(3.5%) scale(1.1)
 }
+
+.Tierney {
+  transform: translateX(10%) translateY(0%);
+}

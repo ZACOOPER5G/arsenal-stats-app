@@ -171,6 +171,17 @@ export const DropdownMenu = (props: any): any => {
                         Granit Xhaka
                     </p>
                 </DropdownItem>
+                <DropdownItem 
+                    leftIcon={ 'X' } 
+
+                  >
+                    <p 
+                        className="kieran-tierney"
+                        onClick={getCurrentPlayer}
+                    >
+                        Kieran Tierney
+                    </p>
+                </DropdownItem>
                 </div>
             </CSSTransition>
         </div>
