@@ -105,7 +105,72 @@ export const DropdownMenu = (props: any): any => {
                         Bukayo Saka
                     </p>
                 </DropdownItem>
+                <DropdownItem 
+                    leftIcon={ 'X' } 
 
+                  >
+                    <p 
+                        className="gabriel-martinelli"
+                        onClick={getCurrentPlayer}
+                    >
+                        Gabriel Martinelli
+                    </p>
+                </DropdownItem>
+                <DropdownItem 
+                    leftIcon={ 'X' } 
+
+                  >
+                    <p 
+                        className="emile-smith-rowe"
+                        onClick={getCurrentPlayer}
+                    >
+                        Emile Smith-Rowe
+                    </p>
+                </DropdownItem>
+                <DropdownItem 
+                    leftIcon={ 'X' } 
+
+                  >
+                    <p 
+                        className="gabriel-jesus"
+                        onClick={getCurrentPlayer}
+                    >
+                        Gabriel Jesus
+                    </p>
+                </DropdownItem>
+                <DropdownItem 
+                    leftIcon={ 'X' } 
+
+                  >
+                    <p 
+                        className="gabriel-magalhaes"
+                        onClick={getCurrentPlayer}
+                    >
+                        Gabriel Magalhães
+                    </p>
+                </DropdownItem>
+                <DropdownItem 
+                    leftIcon={ 'X' } 
+
+                  >
+                    <p 
+                        className="thomas-partey"
+                        onClick={getCurrentPlayer}
+                    >
+                        Thomas Partey
+                    </p>
+                </DropdownItem>
+                <DropdownItem 
+                    leftIcon={ 'X' } 
+
+                  >
+                    <p 
+                        className="granit-xhaka"
+                        onClick={getCurrentPlayer}
+                    >
+                        Granit Xhaka
+                    </p>
+                </DropdownItem>
                 </div>
             </CSSTransition>
         </div>

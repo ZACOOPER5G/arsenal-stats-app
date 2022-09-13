@@ -178,15 +178,16 @@ a {
   top: 173px;
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 917px) {
   .player > img {
-    z-index: -1;
+    z-index: -100;
+    opacity: 50%;
   }
 }
 
 @media screen and (max-width: 520px) {
   .player > img {
-    opacity: 20%;
+    opacity: 30%;
     z-index: 1;
   }
 
@@ -245,7 +246,8 @@ a {
 }
 
 .stats-container {
-  color: rgba(255, 255, 255, 0.8);
+  color: #191b21;
+  font-weight: 700;
   width: 450px;
   background: whitesmoke;
   height: 100%;
@@ -255,6 +257,7 @@ a {
   justify-content: space-between;
   float: right;
   padding: 20px;
+  z-index: 1100;
 }
 
 .group {
@@ -286,4 +289,16 @@ a {
 .Saka {
   /* position: absolute; */
   transform:translateX(20%) translateY(33%) scale(1.6, 1.6);
+}
+
+.Smith-Rowe {
+  transform: translateX(5%) translateY(-15%) scale(0.9, 0.9);
+}
+
+.Jesus {
+  transform: scale(1.2);
+}
+
+.Magalhães {
+  transform: translateX(20%) translateY(0%);
 }

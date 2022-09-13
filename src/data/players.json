@@ -1,12 +1,98 @@
 [
     {
+        "keyName": "martin-odegaard",
         "name": "Ødegaard",
         "imageUrl": "/images/odegaard.png",
         "position": "CAM",
         "nationality": "Norway",
         "age": "23",
-        "dob": "DD/MM/YYYY",
+        "dob": "17 December, 1998",
         "height": "5'10\"",
-        "goals": "3"
+        "goals": "3",
+        "id": "1"
+    },
+    {
+        "keyName": "bukayo-saka",
+        "name": "Saka",
+        "imageUrl": "/images/saka.png",
+        "position": "RM",
+        "nationality": "England",
+        "age": "21",
+        "dob": "5 September, 2001",
+        "height": "5'10\"",
+        "goals": "1",
+        "id": "2"
+    },
+    {
+        "keyName": "gabriel-martinelli",
+        "name": "Martinelli",
+        "imageUrl": "/images/martinelli.png",
+        "position": "LM",
+        "nationality": "Brazil",
+        "age": "21",
+        "dob": "18 June, 2001",
+        "height": "5'10\"",
+        "goals": "1",
+        "id": "3"
+    },
+    {
+        "keyName": "emile-smith-rowe",
+        "name": "Smith-Rowe",
+        "imageUrl": "/images/smithrowe.png",
+        "position": "CAM",
+        "nationality": "England",
+        "age": "22",
+        "dob": "28 July, 2000",
+        "height": "6'0\"",
+        "goals": "0",
+        "id": "4"
+    },
+    {
+        "keyName": "gabriel-jesus",
+        "name": "Jesus",
+        "imageUrl": "/images/jesus.png",
+        "position": "ST",
+        "nationality": "Brazil",
+        "age": "25",
+        "dob": "3 April, 1997",
+        "height": "5'9\"",
+        "goals": "3",
+        "id": "5"
+    },
+    {
+        "keyName": "gabriel-magalhaes",
+        "name": "Magalhães",
+        "imageUrl": "/images/magalhaes.png",
+        "position": "CB",
+        "nationality": "Brazil",
+        "age": "24",
+        "dob": "19 December, 1997",
+        "height": "6'3\"",
+        "goals": "1",
+        "id": "6"
+    },
+    {
+        "keyName": "thomas-partey",
+        "name": "Partey",
+        "imageUrl": "/images/partey.png",
+        "position": "CDM",
+        "nationality": "Ghana",
+        "age": "29",
+        "dob": "13 June, 1993",
+        "height": "6'1\"",
+        "goals": "0",
+        "id": "7"
+    },
+    {
+        "keyName": "granit-xhaka",
+        "name": "Xhaka",
+        "imageUrl": "/images/xhaka.png",
+        "position": "CM",
+        "nationality": "Switzerland",
+        "age": "29",
+        "dob": "27 September, 1992",
+        "height": "6'1\"",
+        "goals": "0",
+        "id": "8"
     }
 ]
