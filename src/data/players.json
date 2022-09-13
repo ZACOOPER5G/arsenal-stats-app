@@ -118,5 +118,17 @@
         "height": "6'4\"",
         "goals": "1",
         "id": "10"
+    },
+    {
+        "keyName": "ben-white",
+        "name": "White",
+        "imageUrl": "/images/white.png",
+        "position": "CB",
+        "nationality": "England",
+        "age": "24",
+        "dob": "8 October, 1997",
+        "height": "6'0\"",
+        "goals": "0",
+        "id": "10"
     }
 ]

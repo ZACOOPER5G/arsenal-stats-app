@@ -309,9 +309,13 @@ a {
 }
 
 .Tierney {
-  transform: translateX(10%) translateY(0%);
+  transform: translateX(5%) translateY(30%) scale(1.6);
 }
 
 .Saliba {
   transform: translateX(5%) translateY(-13%) scale(0.75)
+}
+
+.White {
+  transform: translateX(10%) translateY(-8%) scale(0.95);
 }
