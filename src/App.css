@@ -184,6 +184,10 @@ a {
     z-index: -100;
     opacity: 50%;
   }
+
+  .home-img {
+    transform: translateX(-25%) translateY(-30.6%) scale(0.35) !important;
+  }
 }
 
 @media screen and (max-width: 520px) {
@@ -228,6 +232,9 @@ a {
     z-index: -1;
   }
   
+  .home-img {
+    transform: translateX(-40%) translateY(-30.6%) scale(0.35) !important;
+  }
 }
 
 .player-name {
@@ -318,4 +325,13 @@ a {
 
 .White {
   transform: translateX(10%) translateY(-8%) scale(0.95);
+}
+
+.Tomiyasu {
+  transform: translateX(15%) translateY(-10%) scale(0.90);
+}
+
+.home-img {
+  position: absolute;
+  transform: translateX(-20%) translateY(-30.6%) scale(0.35)
 }

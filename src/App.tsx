@@ -30,6 +30,7 @@ function App() {
           <div className="container">
             <div className="card">
               <h1 className='intro-menu'>Use the menu to select a player!</h1>
+              <img className="home-img" src='./images/arsenal-team.png' />
             </div>
           </div>
         }
