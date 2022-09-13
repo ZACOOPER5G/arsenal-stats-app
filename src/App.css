@@ -165,10 +165,10 @@ a {
 }
 
 .player {
-  height: 600px;
+  height: 800px;
   width: 600px;
   position: absolute;
-  clip-path: inset(0px 0px 0px -100px);
+  clip-path: inset(0px -20px 0px -100px);
   left: -60px;
   bottom: 0px;
 }
@@ -294,41 +294,53 @@ a {
   color: white;
 }
 
+.Ødegaard {
+  transform: scale(1.4) translateY(23%) translateX(9%);
+}
+
 .Saka {
   /* position: absolute; */
-  transform:translateX(20%) translateY(33%) scale(1.6, 1.6);
+  transform:translateX(15%) translateY(55%) scale(1.8);
+}
+
+.Martinelli {
+  transform: translateX(2%) translateY(10%) scale(1.1)
 }
 
 .Smith-Rowe {
-  transform: translateX(5%) translateY(-15%) scale(0.9, 0.9);
+  transform: translateX(5%) translateY(5%) scale(1.3);
 }
 
 .Jesus {
-  transform: scale(1.2);
+  transform: scale(1.5) translateX(1%) translateY(15%);
 }
 
-.Magalhães {
-  transform: translateX(20%) translateY(0%);
+.Gabriel {
+  transform: translateX(24%) translateY(3%);
+}
+
+.Partey {
+  transform: translateY(15.5%) translateX(12%) scale(1.25)
 }
 
 .Xhaka {
-  transform: translateX(5%) translateY(3.5%) scale(1.1)
+  transform: translateX(5%) translateY(15%) scale(1.25)
 }
 
 .Tierney {
-  transform: translateX(5%) translateY(30%) scale(1.6);
+  transform: translateX(5%) translateY(80%) scale(2.3);
 }
 
 .Saliba {
-  transform: translateX(5%) translateY(-13%) scale(0.75)
+  transform: translateX(8%) translateY(-3%) scale(0.9)
 }
 
 .White {
-  transform: translateX(10%) translateY(-8%) scale(0.95);
+  transform: translateX(10%) translateY(15%) scale(1.3);
 }
 
 .Tomiyasu {
-  transform: translateX(15%) translateY(-10%) scale(0.90);
+  transform: translateX(15%) translateY(10%) scale(1.2);
 }
 
 .home-img {
