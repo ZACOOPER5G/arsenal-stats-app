@@ -302,3 +302,7 @@ a {
 .Magalhães {
   transform: translateX(20%) translateY(0%);
 }
+
+.Xhaka {
+  transform: translateX(5%) translateY(3.5%) scale(1.1)
+}
