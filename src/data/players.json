@@ -106,5 +106,17 @@
         "height": "5'10\"",
         "goals": "0",
         "id": "9"
+    },
+    {
+        "keyName": "william-saliba",
+        "name": "Saliba",
+        "imageUrl": "/images/saliba.png",
+        "position": "CB",
+        "nationality": "France",
+        "age": "21",
+        "dob": "24 March, 2001",
+        "height": "6'4\"",
+        "goals": "1",
+        "id": "10"
     }
 ]

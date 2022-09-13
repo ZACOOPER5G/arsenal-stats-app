@@ -80,7 +80,8 @@ a {
   z-index: 1000;
   padding: 1rem;
   overflow: hidden;
-
+  max-height: 600px;
+  overflow: scroll;
   transition: height 500ms ease;
 }
 
@@ -309,4 +310,8 @@ a {
 
 .Tierney {
   transform: translateX(10%) translateY(0%);
+}
+
+.Saliba {
+  transform: translateX(5%) translateY(-13%) scale(0.75)
 }
