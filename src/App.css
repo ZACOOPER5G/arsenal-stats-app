@@ -167,7 +167,7 @@ a {
   height: 600px;
   width: 600px;
   position: absolute;
-  overflow: hidden;
+  clip-path: inset(0px 0px 0px -100px);
   left: -60px;
   bottom: 0px;
 }
@@ -277,4 +277,13 @@ a {
 
 .description {
   font-size: 1.25rem;
+}
+
+.intro-menu {
+  color: white;
+}
+
+.Saka {
+  /* position: absolute; */
+  transform:translateX(20%) translateY(33%) scale(1.6, 1.6);
 }

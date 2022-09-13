@@ -1,25 +1,22 @@
 import playerData from '../data/players.json'
 
-type PlayerDataProps = {
-    name: string
-    imageUrl: string
-    // position: string
-    // nationality: string
-    // age: string
-    // dob: string
-    // height: string
-    // goals: string
-}
+export const PlayerCard = (props: any) => {
+    // retrieves player object
+    let playerObj = playerData.find(item => {
+        if (item.keyName === props.player) {
+            return item
+        }
+    })
 
-export const PlayerCard = () => {
-    let playerImg = playerData.map(item => item.imageUrl).toString()
-    let playerName = playerData.map(item => item.name).toString();
+    let playerImg = playerObj?.imageUrl
+
+    let playerName = playerObj?.name
 
     return (
         <div className="container">
             <div className="card">
                 <div className="player">
-                    <img src={playerImg} alt={playerName}/>
+                    <img src={playerImg} alt={playerName} className={playerName} />
                 </div>
                 <div className="player-name">
                     {playerName}

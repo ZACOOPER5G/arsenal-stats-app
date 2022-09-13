@@ -8,8 +8,8 @@ import { useState } from 'react';
 import playerData from './data/players.json'
 
 function App() {
-  const [playerList, setPlayerList] = useState([playerData]);
-  const [currentPlayer, setCurrentPlayer] = useState({});
+  const [playerList, setPlayerList] = useState(playerData);
+  const [currentPlayer, setCurrentPlayer] = useState(null);
 
   const getCurrentPlayer = (player: any) => {
     console.log("here is your player: " + player)
@@ -24,8 +24,16 @@ function App() {
             <DropdownMenu player={getCurrentPlayer} />
           </NavItem>
         </Navbar>
+        {
+          currentPlayer ? 
+          <PlayerCard player={currentPlayer} /> :
+          <div className="container">
+            <div className="card">
+              <h1 className='intro-menu'>Use the menu to select a player!</h1>
+            </div>
+          </div>
+        }
         
-          <PlayerCard />
 
       </>
       
