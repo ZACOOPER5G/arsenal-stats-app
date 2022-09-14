@@ -343,6 +343,10 @@ a {
   transform: translateX(15%) translateY(10%) scale(1.2);
 }
 
+.Ramsdale {
+  transform: translateX(5%) translateY(5%) scale(1.05);
+}
+
 .home-img {
   position: absolute;
   transform: translateX(-20%) translateY(-30.6%) scale(0.35)

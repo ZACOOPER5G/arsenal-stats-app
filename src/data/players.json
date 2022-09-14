@@ -61,7 +61,7 @@
     },
     {
         "keyName": "gabriel-magalhaes",
-        "name": "Magalhães",
+        "name": "Gabriel",
         "imageUrl": "/images/magalhaes.png",
         "position": "CB",
         "nationality": "Brazil",
@@ -129,6 +129,30 @@
         "dob": "8 October, 1997",
         "height": "6'0\"",
         "goals": "0",
-        "id": "10"
+        "id": "11"
+    },
+    {
+        "keyName": "takehiro-tomiyasu",
+        "name": "Tomiyasu",
+        "imageUrl": "/images/tomiyasu.png",
+        "position": "RB",
+        "nationality": "Japan",
+        "age": "23",
+        "dob": "5 November, 1998",
+        "height": "6'2\"",
+        "goals": "0",
+        "id": "12"
+    },
+    {
+        "keyName": "aaron-ramsdale",
+        "name": "Ramsdale",
+        "imageUrl": "/images/ramsdale.png",
+        "position": "GK",
+        "nationality": "England",
+        "age": "24",
+        "dob": "14 May, 1998",
+        "height": "6'2\"",
+        "goals": "0",
+        "id": "13"
     }
 ]
