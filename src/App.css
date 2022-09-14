@@ -347,6 +347,10 @@ a {
   transform: translateX(5%) translateY(5%) scale(1.05);
 }
 
+.Zinchenko {
+  transform: scale(0.8) translateY(-10%) translateX(10%);
+}
+
 .home-img {
   position: absolute;
   transform: translateX(-20%) translateY(-30.6%) scale(0.35)
