@@ -359,6 +359,10 @@ a {
   transform: scale(1.5) translateY(20%) translateX(5%);
 }
 
+.Nketiah {
+  transform: scale(1.4) translateY(23%) translateX(5%);
+}
+
 .home-img {
   position: absolute;
   transform: translateX(-20%) translateY(-30.6%) scale(0.35)

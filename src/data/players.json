@@ -165,7 +165,7 @@
         "dob": "15 December, 1996",
         "height": "5'9\"",
         "goals": "0",
-        "id": "15"
+        "id": "14"
     },
     {
         "keyName": "sambi-lokonga",
@@ -177,7 +177,7 @@
         "dob": "22 October, 1999",
         "height": "6'0\"",
         "goals": "0",
-        "id": "16"
+        "id": "15"
     },
     {
         "keyName": "mohamed-elneny",
@@ -188,6 +188,18 @@
         "age": "30",
         "dob": "11 July, 1992",
         "height": "5'11\"",
+        "goals": "0",
+        "id": "16"
+    },
+    {
+        "keyName": "eddie-nketiah",
+        "name": "Nketiah",
+        "imageUrl": "/images/nketiah.png",
+        "position": "ST",
+        "nationality": "England",
+        "age": "23",
+        "dob": "30 May, 1999",
+        "height": "5'9\"",
         "goals": "0",
         "id": "17"
     }
