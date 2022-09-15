@@ -351,6 +351,14 @@ a {
   transform: scale(0.8) translateY(-10%) translateX(10%);
 }
 
+.Lokonga {
+  transform: scale(2.1) translateX(15%) translateY(25%)
+}
+
+.Elneny {
+  transform: scale(1.5) translateY(20%) translateX(5%);
+}
+
 .home-img {
   position: absolute;
   transform: translateX(-20%) translateY(-30.6%) scale(0.35)
