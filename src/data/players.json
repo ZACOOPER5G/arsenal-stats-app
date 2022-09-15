@@ -202,5 +202,17 @@
         "height": "5'9\"",
         "goals": "0",
         "id": "17"
+    },
+    {
+        "keyName": "rob-holding",
+        "name": "Holding",
+        "imageUrl": "/images/holding.png",
+        "position": "CB",
+        "nationality": "England",
+        "age": "26",
+        "dob": "20 September, 1995",
+        "height": "6'2\"",
+        "goals": "0",
+        "id": "18"
     }
 ]
