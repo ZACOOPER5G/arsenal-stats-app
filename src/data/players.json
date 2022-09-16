@@ -262,5 +262,17 @@
         "height": "6'3\"",
         "goals": "0",
         "id": "22"
+    },
+    {
+        "keyName": "reiss-nelson",
+        "name": "Nelson",
+        "imageUrl": "/images/nelson.png",
+        "position": "LM",
+        "nationality": "England",
+        "age": "22",
+        "dob": "10 December, 1999",
+        "height": "5'9\"",
+        "goals": "0",
+        "id": "23"
     }
 ]

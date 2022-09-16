@@ -85,7 +85,6 @@ export const DropdownMenu = (props: any): any => {
                 </DropdownItem>
                 <DropdownItem 
                     leftIcon={ 'X' } 
-
                   >
                     <p 
                         className="martin-odegaard"
@@ -96,7 +95,6 @@ export const DropdownMenu = (props: any): any => {
                 </DropdownItem>
                 <DropdownItem 
                     leftIcon={ 'X' } 
-
                   >
                     <p 
                         className="bukayo-saka"
@@ -107,7 +105,6 @@ export const DropdownMenu = (props: any): any => {
                 </DropdownItem>
                 <DropdownItem 
                     leftIcon={ 'X' } 
-
                   >
                     <p 
                         className="gabriel-martinelli"
@@ -118,7 +115,6 @@ export const DropdownMenu = (props: any): any => {
                 </DropdownItem>
                 <DropdownItem 
                     leftIcon={ 'X' } 
-
                   >
                     <p 
                         className="emile-smith-rowe"
@@ -129,7 +125,6 @@ export const DropdownMenu = (props: any): any => {
                 </DropdownItem>
                 <DropdownItem 
                     leftIcon={ 'X' } 
-
                   >
                     <p 
                         className="gabriel-jesus"
@@ -140,7 +135,6 @@ export const DropdownMenu = (props: any): any => {
                 </DropdownItem>
                 <DropdownItem 
                     leftIcon={ 'X' } 
-
                   >
                     <p 
                         className="gabriel-magalhaes"
@@ -151,7 +145,6 @@ export const DropdownMenu = (props: any): any => {
                 </DropdownItem>
                 <DropdownItem 
                     leftIcon={ 'X' } 
-
                   >
                     <p 
                         className="thomas-partey"
@@ -162,7 +155,6 @@ export const DropdownMenu = (props: any): any => {
                 </DropdownItem>
                 <DropdownItem 
                     leftIcon={ 'X' } 
-
                   >
                     <p 
                         className="granit-xhaka"
@@ -173,7 +165,6 @@ export const DropdownMenu = (props: any): any => {
                 </DropdownItem>
                 <DropdownItem 
                     leftIcon={ 'X' } 
-
                   >
                     <p 
                         className="kieran-tierney"
@@ -184,7 +175,6 @@ export const DropdownMenu = (props: any): any => {
                 </DropdownItem>
                 <DropdownItem 
                     leftIcon={ 'X' } 
-
                   >
                     <p 
                         className="william-saliba"
@@ -195,7 +185,6 @@ export const DropdownMenu = (props: any): any => {
                 </DropdownItem>
                 <DropdownItem 
                     leftIcon={ 'X' } 
-
                   >
                     <p 
                         className="ben-white"
@@ -206,7 +195,6 @@ export const DropdownMenu = (props: any): any => {
                 </DropdownItem>
                 <DropdownItem 
                     leftIcon={ 'X' } 
-
                   >
                     <p 
                         className="takehiro-tomiyasu"
@@ -217,7 +205,6 @@ export const DropdownMenu = (props: any): any => {
                 </DropdownItem>
                 <DropdownItem 
                     leftIcon={ 'X' } 
-
                   >
                     <p 
                         className="aaron-ramsdale"
@@ -228,7 +215,6 @@ export const DropdownMenu = (props: any): any => {
                 </DropdownItem>
                 <DropdownItem 
                     leftIcon={ 'X' } 
-
                   >
                     <p 
                         className="oleksandr-zinchenko"
@@ -239,7 +225,6 @@ export const DropdownMenu = (props: any): any => {
                 </DropdownItem>
                 <DropdownItem 
                     leftIcon={ 'X' } 
-
                   >
                     <p 
                         className="sambi-lokonga"
@@ -250,7 +235,6 @@ export const DropdownMenu = (props: any): any => {
                 </DropdownItem>
                 <DropdownItem 
                     leftIcon={ 'X' } 
-
                   >
                     <p 
                         className="mohamed-elneny"
@@ -261,7 +245,6 @@ export const DropdownMenu = (props: any): any => {
                 </DropdownItem>
                 <DropdownItem 
                     leftIcon={ 'X' } 
-
                   >
                     <p 
                         className="eddie-nketiah"
@@ -272,7 +255,6 @@ export const DropdownMenu = (props: any): any => {
                 </DropdownItem>
                 <DropdownItem 
                     leftIcon={ 'X' } 
-
                   >
                     <p 
                         className="rob-holding"
@@ -283,7 +265,6 @@ export const DropdownMenu = (props: any): any => {
                 </DropdownItem>
                 <DropdownItem 
                     leftIcon={ 'X' } 
-
                   >
                     <p 
                         className="marquinhos"
@@ -294,7 +275,6 @@ export const DropdownMenu = (props: any): any => {
                 </DropdownItem>
                 <DropdownItem 
                     leftIcon={ 'X' } 
-
                   >
                     <p 
                         className="cedric-soares"
@@ -305,7 +285,6 @@ export const DropdownMenu = (props: any): any => {
                 </DropdownItem>
                 <DropdownItem 
                     leftIcon={ 'X' } 
-
                   >
                     <p 
                         className="fabio-vieira"
@@ -316,13 +295,22 @@ export const DropdownMenu = (props: any): any => {
                 </DropdownItem>
                 <DropdownItem 
                     leftIcon={ 'X' } 
-
                   >
                     <p 
                         className="matt-turner"
                         onClick={getCurrentPlayer}
                     >
                         Matt Turner
+                    </p>
+                </DropdownItem>
+                <DropdownItem 
+                    leftIcon={ 'X' } 
+                  >
+                    <p 
+                        className="reiss-nelson"
+                        onClick={getCurrentPlayer}
+                    >
+                        Reiss Nelson
                     </p>
                 </DropdownItem>
                 </div>

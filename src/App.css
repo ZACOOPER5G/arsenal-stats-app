@@ -379,6 +379,10 @@ a {
   transform: scale(2) translateY(13.7%) translateX(5%);
 }
 
+.Nelson {
+  transform: scale(1.2) translateY(8%) translateX(15%);
+}
+
 .home-img {
   position: absolute;
   transform: translateX(-20%) translateY(-30.6%) scale(0.35)
