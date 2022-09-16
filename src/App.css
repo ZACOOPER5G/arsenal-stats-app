@@ -168,7 +168,7 @@ a {
   height: 800px;
   width: 600px;
   position: absolute;
-  clip-path: inset(0px -20px 0px -100px);
+  clip-path: inset(0px -20px 0px -200px);
   left: -60px;
   bottom: 0px;
 }
@@ -373,6 +373,10 @@ a {
 
 .Vieira {
   transform: scale(1.7) translateY(15%) translateX(5%);
+}
+
+.Turner {
+  transform: scale(2) translateY(13.7%) translateX(5%);
 }
 
 .home-img {
