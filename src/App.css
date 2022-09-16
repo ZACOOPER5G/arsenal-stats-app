@@ -363,6 +363,10 @@ a {
   transform: scale(1.4) translateY(23%) translateX(5%);
 }
 
+.Marquinhos {
+  transform: scale(2.2) translateY(15%) translateX(5%);
+}
+
 .home-img {
   position: absolute;
   transform: translateX(-20%) translateY(-30.6%) scale(0.35)

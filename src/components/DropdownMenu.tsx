@@ -281,6 +281,17 @@ export const DropdownMenu = (props: any): any => {
                         Rob Holding
                     </p>
                 </DropdownItem>
+                <DropdownItem 
+                    leftIcon={ 'X' } 
+
+                  >
+                    <p 
+                        className="marquinhos"
+                        onClick={getCurrentPlayer}
+                    >
+                        Marquinhos
+                    </p>
+                </DropdownItem>
                 </div>
             </CSSTransition>
         </div>
