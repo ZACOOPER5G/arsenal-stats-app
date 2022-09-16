@@ -238,5 +238,17 @@
         "height": "5'8\"",
         "goals": "0",
         "id": "20"
+    },
+    {
+        "keyName": "fabio-vieira",
+        "name": "Vieira",
+        "imageUrl": "/images/vieira.png",
+        "position": "CAM",
+        "nationality": "Portugal",
+        "age": "22",
+        "dob": "31 August, 2000",
+        "height": "5'7\"",
+        "goals": "0",
+        "id": "21"
     }
 ]
