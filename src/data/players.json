@@ -226,5 +226,17 @@
         "height": "5'9\"",
         "goals": "1",
         "id": "19"
+    },
+    {
+        "keyName": "cedric-soares",
+        "name": "Cédric",
+        "imageUrl": "/images/cedric.png",
+        "position": "RB",
+        "nationality": "Portugal",
+        "age": "31",
+        "dob": "31 August, 1991",
+        "height": "5'8\"",
+        "goals": "0",
+        "id": "20"
     }
 ]
