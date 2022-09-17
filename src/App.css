@@ -44,9 +44,9 @@ a {
   justify-content: center;
   border-radius: 50%;
   background-color: #DB0007;
-  margin: 1rem;
+  margin-top: auto;
+  margin-bottom: auto;
   padding: 1rem;
-  transform: translateY(-30%);
   transition: filter 300ms;
 }
 
