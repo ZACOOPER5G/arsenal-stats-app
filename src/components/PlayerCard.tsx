@@ -45,7 +45,6 @@ export const PlayerCard = (props: any) => {
         axios.request(options)
         .then(res => {
             setPlayerStats(res.data.statistics)
-            console.log(playerStats.goals)
         })
         .catch(err => {
             console.log(err)
