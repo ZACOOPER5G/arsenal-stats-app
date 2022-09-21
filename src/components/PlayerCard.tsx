@@ -1,14 +1,21 @@
 import axios from 'axios'
-import { useEffect, useState } from 'react'
+import { Stats } from 'fs'
+import { ReactNode, useEffect, useState } from 'react'
 import playerData from '../data/players.json'
 
+interface PlayerCardStats {
+    [name: string] : ReactNode;
+}
+
 export const PlayerCard = (props: any) => {
-    const [playerStats, setPlayerStats] = useState([])
+    const [playerStats, setPlayerStats] = useState<PlayerCardStats>({})
+    const [isPlayerSelected, setIsPlayerSelected] = useState(false)
     // retrieves player object
     let playerObj = playerData.find(item => {
         if (item.keyName === props.player) {
             return item
         }
+        props.player && setIsPlayerSelected(true)
     })
 
     let playerKey = playerObj?.id
@@ -19,7 +26,6 @@ export const PlayerCard = (props: any) => {
     let playerAge = playerObj?.age
     let playerDOB = playerObj?.dob
     let playerHeight = playerObj?.height
-    // let playerGoals = playerStats.goals
 
     const options = {
         method: 'GET',
@@ -32,14 +38,14 @@ export const PlayerCard = (props: any) => {
 
     useEffect(() => {
         getPlayerData()
-    }, [])
+    }, [isPlayerSelected])
 
     const getPlayerData = () => {
         //@ts-ignore
         axios.request(options)
         .then(res => {
-            console.log(res.data.statistics)
             setPlayerStats(res.data.statistics)
+            console.log(playerStats.goals)
         })
         .catch(err => {
             console.log(err)
@@ -48,7 +54,6 @@ export const PlayerCard = (props: any) => {
 
     return (
         <div className="container">
-            <button onClick={getPlayerData}>click for stats</button>
             <div className="card">
                 <div className="player">
                     <img src={playerImg} alt={playerName} className={playerName} />
@@ -79,15 +84,15 @@ export const PlayerCard = (props: any) => {
                     </div>
                     <div className='group'>
                         <h3 className="label">Goals</h3>
-                        <span className="description">{playerGoals}</span>
+                        <span className="description">{playerStats.goals}</span>
                     </div>
                     <div className='group'>
                         <h3 className="label">Assists</h3>
-                        <span className="description">{playerGoals}</span>
+                        <span className="description">{playerStats.assists}</span>
                     </div>
                     <div className='group'>
                         <h3 className="label">Appearances</h3>
-                        <span className="description">{playerGoals}</span>
+                        <span className="description">{playerStats.appearances}</span>
                     </div>
                 </div>
             </div>
