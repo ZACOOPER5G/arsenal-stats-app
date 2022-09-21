@@ -1,7 +1,9 @@
 import axios from 'axios'
+import { useEffect, useState } from 'react'
 import playerData from '../data/players.json'
 
 export const PlayerCard = (props: any) => {
+    const [playerStats, setPlayerStats] = useState([])
     // retrieves player object
     let playerObj = playerData.find(item => {
         if (item.keyName === props.player) {
@@ -17,28 +19,32 @@ export const PlayerCard = (props: any) => {
     let playerAge = playerObj?.age
     let playerDOB = playerObj?.dob
     let playerHeight = playerObj?.height
-    let playerGoals = playerObj?.goals
+    // let playerGoals = playerStats.goals
 
     const options = {
         method: 'GET',
-        url: `https://footapi7.p.rapidapi.com/api/search/${playerKey}`,
+        url: `https://footapi7.p.rapidapi.com/api/player/${playerKey}/tournament/17/season/41886/statistics`,
         headers: {
-          'X-RapidAPI-Key': process.env.REACT_APP_KEY,
+          'X-RapidAPI-Key': '27d1c8b018mshf0fd64efe848ad6p1be2b4jsn632339a8f382',
           'X-RapidAPI-Host': 'footapi7.p.rapidapi.com'
         }
       };
+
+    useEffect(() => {
+        getPlayerData()
+    }, [])
 
     const getPlayerData = () => {
         //@ts-ignore
         axios.request(options)
         .then(res => {
-            console.log(res)
+            console.log(res.data.statistics)
+            setPlayerStats(res.data.statistics)
         })
         .catch(err => {
             console.log(err)
         })
     }
-
 
     return (
         <div className="container">
@@ -76,11 +82,11 @@ export const PlayerCard = (props: any) => {
                         <span className="description">{playerGoals}</span>
                     </div>
                     <div className='group'>
-                        <h3 className="label">Goals</h3>
+                        <h3 className="label">Assists</h3>
                         <span className="description">{playerGoals}</span>
                     </div>
                     <div className='group'>
-                        <h3 className="label">Goals</h3>
+                        <h3 className="label">Appearances</h3>
                         <span className="description">{playerGoals}</span>
                     </div>
                 </div>
