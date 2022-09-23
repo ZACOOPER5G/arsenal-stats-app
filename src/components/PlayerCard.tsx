@@ -89,15 +89,31 @@ export const PlayerCard = (props: any) => {
                     </div>
                     <div className='group'>
                         <h3 className="label">Goals</h3>
-                        <span className="description">{playerStats.goals === null ? "0" : playerStats.goals}</span>
+                        <span className="description">{playerStats.goals === null || !playerStats.appearances  ? "0" : playerStats.goals}</span>
                     </div>
                     <div className='group'>
                         <h3 className="label">Assists</h3>
-                        <span className="description">{playerStats.assists === null? '0' : playerStats.assists}</span>
+                        <span className="description">{playerStats.assists === null || !playerStats.appearances ? '0' : playerStats.assists}</span>
                     </div>
                     <div className='group'>
                         <h3 className="label">Appearances</h3>
-                        <span className="description">{playerStats.appearances === null ? '0' : playerStats.appearances}</span>
+                        <span className="description">{playerStats.appearances === null || !playerStats.appearances ? '0' : playerStats.appearances}</span>
+                    </div>
+                    <div className='group'>
+                        <h3 className="label">Matches Started</h3>
+                        <span className="description">{playerStats.appearances === null || !playerStats.appearances ? '0' : playerStats.matchesStarted}</span>
+                    </div>
+                    <div className='group'>
+                        <h3 className="label">Goals/Assists</h3>
+                        <span className="description">{playerStats.appearances === null || !playerStats.appearances ? '0' : playerStats.goalsAssistsSum}</span>
+                    </div>
+                    <div className='group'>
+                        <h3 className="label">Minutes Played</h3>
+                        <span className="description">{playerStats.appearances === null || !playerStats.appearances ? '0' : playerStats.minutesPlayed}</span>
+                    </div>
+                    <div className='group'>
+                        <h3 className="label">Key Passes</h3>
+                        <span className="description">{playerStats.appearances === null || !playerStats.appearances ? '0' : playerStats.keyPasses}</span>
                     </div>
                 </div>
             </div>
