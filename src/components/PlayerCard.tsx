@@ -36,7 +36,7 @@ export const PlayerCard = (props: any) => {
 
     useEffect(() => {
         getPlayerData()
-    }, []);
+    }, [props.player]);
 
     const getPlayerData = () => {
         axios.request(options)
