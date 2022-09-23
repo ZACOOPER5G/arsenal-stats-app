@@ -8,6 +8,7 @@ interface PlayerCardStats {
 
 export const PlayerCard = (props: any) => {
     const [playerStats, setPlayerStats] = useState<PlayerCardStats>({})
+    const [isGK, setIsGK] = useState<boolean>(false)
 
     // retrieves player object
     let playerObj = playerData.find(item => {
@@ -25,6 +26,14 @@ export const PlayerCard = (props: any) => {
     let playerDOB = playerObj?.dob
     let playerHeight = playerObj?.height
 
+    useEffect(() => {
+        if (playerPosition === "GK") {
+            setIsGK(true);
+        } else {
+            setIsGK(false)
+        };
+    }, [props.player]);
+
     const options = {
         method: 'GET',
         url: `https://footapi7.p.rapidapi.com/api/player/${playerKey}/tournament/17/season/41886/statistics`,
@@ -32,7 +41,7 @@ export const PlayerCard = (props: any) => {
           'X-RapidAPI-Key': '27d1c8b018mshf0fd64efe848ad6p1be2b4jsn632339a8f382',
           'X-RapidAPI-Host': 'footapi7.p.rapidapi.com'
         }
-      };
+    };
 
     useEffect(() => {
         getPlayerData()
@@ -48,7 +57,7 @@ export const PlayerCard = (props: any) => {
         })
     };
 
-    return (
+    return !isGK ? (
         <div className="container">
             <div className="card">
                 <div className="player">
@@ -84,6 +93,50 @@ export const PlayerCard = (props: any) => {
                     </div>
                     <div className='group'>
                         <h3 className="label">Assists</h3>
+                        <span className="description">{playerStats.assists === null? '0' : playerStats.assists}</span>
+                    </div>
+                    <div className='group'>
+                        <h3 className="label">Appearances</h3>
+                        <span className="description">{playerStats.appearances === null ? '0' : playerStats.appearances}</span>
+                    </div>
+                </div>
+            </div>
+        </div> ) : (
+            <div className="container">
+            <div className="card">
+                <div className="player">
+                    <img src={playerImg} alt={playerName} className={playerName} />
+                </div>
+                <div className="player-name">
+                    {playerName}
+                </div>
+                <div className="stats-container" >
+                    <div className="group">
+                        <h3 className="label">Position</h3>
+                        <span className="description">{playerPosition}</span>
+                    </div>
+                    <div className='group'>
+                        <h3 className="label">Nationality</h3>
+                        <span className="description">{playerNationality}</span>
+                    </div>
+                    <div className='group'>
+                        <h3 className="label">Age</h3>
+                        <span className="description">{playerAge}</span>
+                    </div>
+                    <div className='group'>
+                        <h3 className="label">DOB</h3>
+                        <span className="description">{playerDOB}</span>
+                    </div>
+                    <div className='group'>
+                        <h3 className="label">Height</h3>
+                        <span className="description">{playerHeight}</span>
+                    </div>
+                    <div className='group'>
+                        <h3 className="label">Saves</h3>
+                        <span className="description">{playerStats.goals === null ? "0" : playerStats.goals}</span>
+                    </div>
+                    <div className='group'>
+                        <h3 className="label">Shots</h3>
                         <span className="description">{playerStats.assists === null? '0' : playerStats.assists}</span>
                     </div>
                     <div className='group'>
