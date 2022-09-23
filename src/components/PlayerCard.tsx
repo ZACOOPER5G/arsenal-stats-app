@@ -1,22 +1,20 @@
 import axios from 'axios'
-import { Stats } from 'fs'
 import { ReactNode, useEffect, useState } from 'react'
 import playerData from '../data/players.json'
 
 interface PlayerCardStats {
     [name: string] : ReactNode;
-}
+};
 
 export const PlayerCard = (props: any) => {
     const [playerStats, setPlayerStats] = useState<PlayerCardStats>({})
-    const [isPlayerSelected, setIsPlayerSelected] = useState(false)
+
     // retrieves player object
     let playerObj = playerData.find(item => {
         if (item.keyName === props.player) {
             return item
         }
-        props.player && setIsPlayerSelected(true)
-    })
+    });
 
     let playerKey = playerObj?.id
     let playerImg = playerObj?.imageUrl
@@ -38,10 +36,9 @@ export const PlayerCard = (props: any) => {
 
     useEffect(() => {
         getPlayerData()
-    }, [isPlayerSelected])
+    }, []);
 
     const getPlayerData = () => {
-        //@ts-ignore
         axios.request(options)
         .then(res => {
             setPlayerStats(res.data.statistics)
@@ -49,7 +46,7 @@ export const PlayerCard = (props: any) => {
         .catch(err => {
             console.log(err)
         })
-    }
+    };
 
     return (
         <div className="container">
@@ -83,15 +80,15 @@ export const PlayerCard = (props: any) => {
                     </div>
                     <div className='group'>
                         <h3 className="label">Goals</h3>
-                        <span className="description">{playerStats.goals}</span>
+                        <span className="description">{playerStats.goals === null ? "0" : playerStats.goals}</span>
                     </div>
                     <div className='group'>
                         <h3 className="label">Assists</h3>
-                        <span className="description">{playerStats.assists}</span>
+                        <span className="description">{playerStats.assists === null? '0' : playerStats.assists}</span>
                     </div>
                     <div className='group'>
                         <h3 className="label">Appearances</h3>
-                        <span className="description">{playerStats.appearances}</span>
+                        <span className="description">{playerStats.appearances === null ? '0' : playerStats.appearances}</span>
                     </div>
                 </div>
             </div>
