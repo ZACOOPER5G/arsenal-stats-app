@@ -57,110 +57,121 @@ export const PlayerCard = (props: any) => {
         })
     };
 
-    return !isGK ? (
-        <div className="container">
-            <div className="card">
-                <div className="player">
-                    <img src={playerImg} alt={playerName} className={playerName} />
-                </div>
-                <div className="player-name">
-                    {playerName}
-                </div>
-                <div className="stats-container" >
-                    <div className="group">
-                        <h3 className="label">Position</h3>
-                        <span className="description">{playerPosition}</span>
+    return (
+        <div className='container'>
+          {(() => {
+            if (!isGK) {
+              return (
+                <div className="card">
+                    <div className="player">
+                        <img src={playerImg} alt={playerName} className={playerName} />
                     </div>
-                    <div className='group'>
-                        <h3 className="label">Nationality</h3>
-                        <span className="description">{playerNationality}</span>
+                    <div className="player-name">
+                        {playerName}
                     </div>
-                    <div className='group'>
-                        <h3 className="label">Age</h3>
-                        <span className="description">{playerAge}</span>
-                    </div>
-                    <div className='group'>
-                        <h3 className="label">DOB</h3>
-                        <span className="description">{playerDOB}</span>
-                    </div>
-                    <div className='group'>
-                        <h3 className="label">Height</h3>
-                        <span className="description">{playerHeight}</span>
-                    </div>
-                    <div className='group'>
-                        <h3 className="label">Goals</h3>
-                        <span className="description">{playerStats.goals === null || !playerStats.appearances  ? "0" : playerStats.goals}</span>
-                    </div>
-                    <div className='group'>
-                        <h3 className="label">Assists</h3>
-                        <span className="description">{playerStats.assists === null || !playerStats.appearances ? '0' : playerStats.assists}</span>
-                    </div>
-                    <div className='group'>
-                        <h3 className="label">Appearances</h3>
-                        <span className="description">{playerStats.appearances === null || !playerStats.appearances ? '0' : playerStats.appearances}</span>
-                    </div>
-                    <div className='group'>
-                        <h3 className="label">Matches Started</h3>
-                        <span className="description">{playerStats.appearances === null || !playerStats.appearances ? '0' : playerStats.matchesStarted}</span>
-                    </div>
-                    <div className='group'>
-                        <h3 className="label">Goals/Assists</h3>
-                        <span className="description">{playerStats.appearances === null || !playerStats.appearances ? '0' : playerStats.goalsAssistsSum}</span>
-                    </div>
-                    <div className='group'>
-                        <h3 className="label">Minutes Played</h3>
-                        <span className="description">{playerStats.appearances === null || !playerStats.appearances ? '0' : playerStats.minutesPlayed}</span>
-                    </div>
-                    <div className='group'>
-                        <h3 className="label">Key Passes</h3>
-                        <span className="description">{playerStats.appearances === null || !playerStats.appearances ? '0' : playerStats.keyPasses}</span>
-                    </div>
-                </div>
-            </div>
-        </div> ) : (
-            <div className="container">
-            <div className="card">
-                <div className="player">
-                    <img src={playerImg} alt={playerName} className={playerName} />
-                </div>
-                <div className="player-name">
-                    {playerName}
-                </div>
-                <div className="stats-container" >
-                    <div className="group">
-                        <h3 className="label">Position</h3>
-                        <span className="description">{playerPosition}</span>
-                    </div>
-                    <div className='group'>
-                        <h3 className="label">Nationality</h3>
-                        <span className="description">{playerNationality}</span>
-                    </div>
-                    <div className='group'>
-                        <h3 className="label">Age</h3>
-                        <span className="description">{playerAge}</span>
-                    </div>
-                    <div className='group'>
-                        <h3 className="label">DOB</h3>
-                        <span className="description">{playerDOB}</span>
-                    </div>
-                    <div className='group'>
-                        <h3 className="label">Height</h3>
-                        <span className="description">{playerHeight}</span>
-                    </div>
-                    <div className='group'>
-                        <h3 className="label">Saves</h3>
-                        <span className="description">{playerStats.goals === null ? "0" : playerStats.goals}</span>
-                    </div>
-                    <div className='group'>
-                        <h3 className="label">Shots</h3>
-                        <span className="description">{playerStats.assists === null? '0' : playerStats.assists}</span>
-                    </div>
-                    <div className='group'>
-                        <h3 className="label">Appearances</h3>
-                        <span className="description">{playerStats.appearances === null ? '0' : playerStats.appearances}</span>
+                    <div className="stats-container" >
+                        <div className="group">
+                            <h3 className="label">Position</h3>
+                            <span className="description">{playerPosition}</span>
+                        </div>
+                        <div className='group'>
+                            <h3 className="label">Nationality</h3>
+                            <span className="description">{playerNationality}</span>
+                        </div>
+                        <div className='group'>
+                            <h3 className="label">Age</h3>
+                            <span className="description">{playerAge}</span>
+                        </div>
+                        <div className='group'>
+                            <h3 className="label">DOB</h3>
+                            <span className="description">{playerDOB}</span>
+                        </div>
+                        <div className='group'>
+                            <h3 className="label">Height</h3>
+                            <span className="description">{playerHeight}</span>
+                        </div>
+                        <div className='group'>
+                            <h3 className="label">Goals</h3>
+                            <span className="description">{playerStats.goals === null || !playerStats.appearances  ? "0" : playerStats.goals}</span>
+                        </div>
+                        <div className='group'>
+                            <h3 className="label">Assists</h3>
+                            <span className="description">{playerStats.assists === null || !playerStats.appearances ? '0' : playerStats.assists}</span>
+                        </div>
+                        <div className='group'>
+                            <h3 className="label">Appearances</h3>
+                            <span className="description">{playerStats.appearances === null || !playerStats.appearances ? '0' : playerStats.appearances}</span>
+                        </div>
+                        <div className='group'>
+                            <h3 className="label">Matches Started</h3>
+                            <span className="description">{playerStats.appearances === null || !playerStats.appearances ? '0' : playerStats.matchesStarted}</span>
+                        </div>
+                        <div className='group'>
+                            <h3 className="label">Goals/Assists</h3>
+                            <span className="description">{playerStats.appearances === null || !playerStats.appearances ? '0' : playerStats.goalsAssistsSum}</span>
+                        </div>
+                        <div className='group'>
+                            <h3 className="label">Minutes Played</h3>
+                            <span className="description">{playerStats.appearances === null || !playerStats.appearances ? '0' : playerStats.minutesPlayed}</span>
+                        </div>
+                        <div className='group'>
+                            <h3 className="label">Key Passes</h3>
+                            <span className="description">{playerStats.appearances === null || !playerStats.appearances ? '0' : playerStats.keyPasses}</span>
+                        </div>
                     </div>
                 </div>
-            </div>
+              )
+            } else if (isGK) {
+              return (
+                <div className="card">
+                    <div className="player">
+                        <img src={playerImg} alt={playerName} className={playerName} />
+                    </div>
+                    <div className="player-name">
+                        {playerName}
+                    </div>
+                    <div className="stats-container" >
+                        <div className="group">
+                            <h3 className="label">Position</h3>
+                            <span className="description">{playerPosition}</span>
+                        </div>
+                        <div className='group'>
+                            <h3 className="label">Nationality</h3>
+                            <span className="description">{playerNationality}</span>
+                        </div>
+                        <div className='group'>
+                            <h3 className="label">Age</h3>
+                            <span className="description">{playerAge}</span>
+                        </div>
+                        <div className='group'>
+                            <h3 className="label">DOB</h3>
+                            <span className="description">{playerDOB}</span>
+                        </div>
+                        <div className='group'>
+                            <h3 className="label">Height</h3>
+                            <span className="description">{playerHeight}</span>
+                        </div>
+                        <div className='group'>
+                            <h3 className="label">Saves</h3>
+                            <span className="description">{playerStats.goals === null ? "0" : playerStats.goals}</span>
+                        </div>
+                        <div className='group'>
+                            <h3 className="label">Shots</h3>
+                            <span className="description">{playerStats.assists === null? '0' : playerStats.assists}</span>
+                        </div>
+                        <div className='group'>
+                            <h3 className="label">Appearances</h3>
+                            <span className="description">{playerStats.appearances === null ? '0' : playerStats.appearances}</span>
+                        </div>
+                    </div>
+                </div>
+              )
+            } else {
+              return (
+                <div>catch all</div>
+              )
+            }
+          })()}
         </div>
-    )
+      )
 }
