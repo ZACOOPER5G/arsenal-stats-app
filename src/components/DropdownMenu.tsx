@@ -56,6 +56,7 @@ export const DropdownMenu = (props: any): any => {
                 <DropdownItem 
                     leftIcon={<ArsenalLogo style={{transform:"scale(0.8, 0.8) translateY(0.4%)"}}/>} 
                     rightIcon={<Arrow style={{transform:"rotate(-90deg) scale(0.9, 0.9) translateX(3%) translateY(10%)"}}/>}
+                    goToMenu="team" 
                 >
                     Team Stats
                 </DropdownItem>
@@ -69,6 +70,25 @@ export const DropdownMenu = (props: any): any => {
 
                 </div>
             </CSSTransition>
+            <CSSTransition 
+                in={activeMenu === 'team'} 
+                unmountOnExit 
+                timeout={500}
+                classNames="menu-primary"
+                onEnter={calcHeight}
+            >
+                 <div className='menu'>
+                     
+                <DropdownItem 
+                    leftIcon={<ArsenalLogo style={{transform:"scale(0.8, 0.8) translateY(0.4%)"}}/>} 
+                    rightIcon={<Arrow style={{transform:"rotate(-90deg) scale(0.9, 0.9) translateX(3%) translateY(10%)"}}/>}
+                    goToMenu="main"
+                >
+                    Coming Soon...
+                </DropdownItem>
+                </div>
+            </CSSTransition>
+
             <CSSTransition 
                 in={activeMenu === 'players'} 
                 unmountOnExit 
