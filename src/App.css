@@ -400,5 +400,6 @@ a {
 
 .home-img {
   position: absolute;
-  transform: translateX(-20%) translateY(-30.6%) scale(0.35)
+  transform: translateX(60%) translateY(-19.5%) scale(0.9);
+  opacity: 0.4;
 }
