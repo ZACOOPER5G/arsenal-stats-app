@@ -59,8 +59,8 @@ a {
 }
 
 .icon-button {
-  height: 1.5rem;
-  width: 1.5rem;
+  height: 2rem;
+  width: 2rem;
   background-color: #DB0007;
   border-radius: 50%;
   margin: 2px;
@@ -70,8 +70,13 @@ a {
 }
 
 .icon-button svg {
-  width: 20px;
-  width: 20px;
+  width: 28px;
+  width: 28px;
+}
+
+.icon-button img {
+  transform: scale(0.13) translateY(24%) ;
+  clip-path: ellipse(50% 50% at 50% 0%);
 }
 
 .nav-item:hover {
@@ -361,7 +366,7 @@ a {
 }
 
 .Zinchenko {
-  transform: scale(0.8) translateY(-10%) translateX(10%);
+  transform: scale(1.2) translateY(7%) translateX(10%);
 }
 
 .Lokonga {
@@ -402,4 +407,10 @@ a {
   position: absolute;
   transform: translateX(60%) translateY(-19.5%) scale(0.9);
   opacity: 0.4;
+}
+
+.player-icon {
+  transform: scale(0.035) !important;
+  opacity: 0.65 !important;
+  clip-path: none !important;
 }

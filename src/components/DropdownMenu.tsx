@@ -1,14 +1,8 @@
 import { ReactComponent as ArsenalLogo} from '../images/arsenal-logo.svg';
-// import { ReactComponent as PlayerIcon} from '../images/player-icon.svg';
 import { ReactComponent as Arrow} from '../images/arrow.svg';
 import { useEffect, useState } from 'react';
 import { CSSTransition } from 'react-transition-group';
 import { useRef } from 'react';
-// import { ReactComponent as MartinIcon } from '../images/martin.svg'
-
-type DropdownMenuProps = {
-    currentPlayer: () => void
-}
 
 export const DropdownMenu = (props: any): any => {
     const [activeMenu, setActiveMenu] = useState<string>('main');
@@ -62,7 +56,7 @@ export const DropdownMenu = (props: any): any => {
                 </DropdownItem>
                 <DropdownItem 
                     goToMenu="players" 
-                    leftIcon={ `👤` } 
+                    leftIcon={ <img src='/images/player-icon.png' className='player-icon' /> } 
                     rightIcon={<Arrow style={{transform:"rotate(-90deg) scale(0.9, 0.9) translateX(3%) translateY(10%)"}}/>}
                 >
                     Player Stats
@@ -104,7 +98,7 @@ export const DropdownMenu = (props: any): any => {
                     Return
                 </DropdownItem>
                 <DropdownItem 
-                    leftIcon={ 'X' } 
+                    leftIcon={ <img src='/images/odegaard-icon.png' className='odegaard-icon' /> } 
                   >
                     <p 
                         className="martin-odegaard"
@@ -114,7 +108,7 @@ export const DropdownMenu = (props: any): any => {
                     </p>
                 </DropdownItem>
                 <DropdownItem 
-                    leftIcon={ 'X' } 
+                    leftIcon={ <img src='/images/saka-icon.png' className='saka-icon' /> } 
                   >
                     <p 
                         className="bukayo-saka"
@@ -124,7 +118,7 @@ export const DropdownMenu = (props: any): any => {
                     </p>
                 </DropdownItem>
                 <DropdownItem 
-                    leftIcon={ 'X' } 
+                    leftIcon={ <img src='/images/martinelli-icon.png' className='martinelli-icon' /> } 
                   >
                     <p 
                         className="gabriel-martinelli"
@@ -134,7 +128,7 @@ export const DropdownMenu = (props: any): any => {
                     </p>
                 </DropdownItem>
                 <DropdownItem 
-                    leftIcon={ 'X' } 
+                    leftIcon={ <img src='/images/smith-rowe-icon.png' className='smith-rowe-icon' />} 
                   >
                     <p 
                         className="emile-smith-rowe"
@@ -144,7 +138,7 @@ export const DropdownMenu = (props: any): any => {
                     </p>
                 </DropdownItem>
                 <DropdownItem 
-                    leftIcon={ 'X' } 
+                    leftIcon={ <img src='/images/jesus-icon.png' className='jesus-icon' /> } 
                   >
                     <p 
                         className="gabriel-jesus"
@@ -154,7 +148,7 @@ export const DropdownMenu = (props: any): any => {
                     </p>
                 </DropdownItem>
                 <DropdownItem 
-                    leftIcon={ 'X' } 
+                    leftIcon={ <img src='/images/gabriel-icon.png' className='gabriel-icon' /> } 
                   >
                     <p 
                         className="gabriel-magalhaes"
@@ -164,7 +158,7 @@ export const DropdownMenu = (props: any): any => {
                     </p>
                 </DropdownItem>
                 <DropdownItem 
-                    leftIcon={ 'X' } 
+                    leftIcon={ <img src='/images/partey-icon.png' className='partey-icon' /> } 
                   >
                     <p 
                         className="thomas-partey"
@@ -174,7 +168,7 @@ export const DropdownMenu = (props: any): any => {
                     </p>
                 </DropdownItem>
                 <DropdownItem 
-                    leftIcon={ 'X' } 
+                    leftIcon={ <img src='/images/xhaka-icon.png' className='xhaka-icon' /> } 
                   >
                     <p 
                         className="granit-xhaka"
@@ -184,7 +178,7 @@ export const DropdownMenu = (props: any): any => {
                     </p>
                 </DropdownItem>
                 <DropdownItem 
-                    leftIcon={ 'X' } 
+                    leftIcon={ <img src='/images/tierney-icon.png' className='tierney-icon' /> } 
                   >
                     <p 
                         className="kieran-tierney"
@@ -194,7 +188,7 @@ export const DropdownMenu = (props: any): any => {
                     </p>
                 </DropdownItem>
                 <DropdownItem 
-                    leftIcon={ 'X' } 
+                    leftIcon={ <img src='/images/saliba-icon.png' className='saliba-icon' /> } 
                   >
                     <p 
                         className="william-saliba"
@@ -204,7 +198,7 @@ export const DropdownMenu = (props: any): any => {
                     </p>
                 </DropdownItem>
                 <DropdownItem 
-                    leftIcon={ 'X' } 
+                    leftIcon={ <img src='/images/white-icon.png' className='white-icon' /> } 
                   >
                     <p 
                         className="ben-white"
@@ -214,7 +208,7 @@ export const DropdownMenu = (props: any): any => {
                     </p>
                 </DropdownItem>
                 <DropdownItem 
-                    leftIcon={ 'X' } 
+                    leftIcon={ <img src='/images/tomiyasu-icon.png' className='tomiyasu-icon' /> } 
                   >
                     <p 
                         className="takehiro-tomiyasu"
@@ -224,7 +218,7 @@ export const DropdownMenu = (props: any): any => {
                     </p>
                 </DropdownItem>
                 <DropdownItem 
-                    leftIcon={ 'X' } 
+                    leftIcon={ <img src='/images/ramsdale-icon.png' className='ramsdale-icon' /> } 
                   >
                     <p 
                         className="aaron-ramsdale"
@@ -234,7 +228,7 @@ export const DropdownMenu = (props: any): any => {
                     </p>
                 </DropdownItem>
                 <DropdownItem 
-                    leftIcon={ 'X' } 
+                    leftIcon={ <img src='/images/zinchenko-icon.png' className='zinchenko-icon' /> } 
                   >
                     <p 
                         className="oleksandr-zinchenko"
@@ -244,7 +238,7 @@ export const DropdownMenu = (props: any): any => {
                     </p>
                 </DropdownItem>
                 <DropdownItem 
-                    leftIcon={ 'X' } 
+                    leftIcon={ <img src='/images/lokonga-icon.png' className='lokonga-icon' /> } 
                   >
                     <p 
                         className="sambi-lokonga"
@@ -254,7 +248,7 @@ export const DropdownMenu = (props: any): any => {
                     </p>
                 </DropdownItem>
                 <DropdownItem 
-                    leftIcon={ 'X' } 
+                    leftIcon={ <img src='/images/elneny-icon.png' className='elneny-icon' /> } 
                   >
                     <p 
                         className="mohamed-elneny"
@@ -264,7 +258,7 @@ export const DropdownMenu = (props: any): any => {
                     </p>
                 </DropdownItem>
                 <DropdownItem 
-                    leftIcon={ 'X' } 
+                    leftIcon={ <img src='/images/nketiah-icon.png' className='nketiah-icon' /> } 
                   >
                     <p 
                         className="eddie-nketiah"
@@ -274,7 +268,7 @@ export const DropdownMenu = (props: any): any => {
                     </p>
                 </DropdownItem>
                 <DropdownItem 
-                    leftIcon={ 'X' } 
+                    leftIcon={ <img src='/images/holding-icon.png' className='holding-icon' /> } 
                   >
                     <p 
                         className="rob-holding"
@@ -284,7 +278,7 @@ export const DropdownMenu = (props: any): any => {
                     </p>
                 </DropdownItem>
                 <DropdownItem 
-                    leftIcon={ 'X' } 
+                    leftIcon={ <img src='/images/marquinhos-icon.png' className='marquinhos-icon' /> } 
                   >
                     <p 
                         className="marquinhos"
@@ -294,7 +288,7 @@ export const DropdownMenu = (props: any): any => {
                     </p>
                 </DropdownItem>
                 <DropdownItem 
-                    leftIcon={ 'X' } 
+                    leftIcon={ <img src='/images/cedric-icon.png' className='cedric-icon' /> } 
                   >
                     <p 
                         className="cedric-soares"
@@ -304,7 +298,7 @@ export const DropdownMenu = (props: any): any => {
                     </p>
                 </DropdownItem>
                 <DropdownItem 
-                    leftIcon={ 'X' } 
+                    leftIcon={ <img src='/images/vieira-icon.png' className='vieira-icon' /> } 
                   >
                     <p 
                         className="fabio-vieira"
@@ -314,7 +308,7 @@ export const DropdownMenu = (props: any): any => {
                     </p>
                 </DropdownItem>
                 <DropdownItem 
-                    leftIcon={ 'X' } 
+                    leftIcon={ <img src='/images/turner-icon.png' className='turner-icon' /> } 
                   >
                     <p 
                         className="matt-turner"
@@ -324,7 +318,7 @@ export const DropdownMenu = (props: any): any => {
                     </p>
                 </DropdownItem>
                 <DropdownItem 
-                    leftIcon={ 'X' } 
+                    leftIcon={ <img src='/images/nelson-icon.png' className='nelson-icon' /> } 
                   >
                     <p 
                         className="reiss-nelson"
