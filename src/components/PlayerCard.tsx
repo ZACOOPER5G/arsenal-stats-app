@@ -32,7 +32,7 @@ export const PlayerCard = (props: any) => {
         } else {
             setIsGK(false)
         };
-    }, [props.player]);
+    }, [props.player, playerPosition]);
 
     const options = {
         method: 'GET',
@@ -43,10 +43,6 @@ export const PlayerCard = (props: any) => {
         }
     };
 
-    useEffect(() => {
-        getPlayerData()
-    }, [props.player]);
-
     const getPlayerData = () => {
         axios.request(options)
         .then(res => {
@@ -56,6 +52,10 @@ export const PlayerCard = (props: any) => {
             console.log(err)
         })
     };
+
+    useEffect(() => {
+        getPlayerData()
+    }, [props.player]);
 
     return (
         <div className='container'>
@@ -156,8 +156,8 @@ export const PlayerCard = (props: any) => {
                             <span className="description">{playerStats.goals === null ? "0" : playerStats.goals}</span>
                         </div>
                         <div className='group'>
-                            <h3 className="label">Shots</h3>
-                            <span className="description">{playerStats.assists === null? '0' : playerStats.assists}</span>
+                            <h3 className="label">Clean Sheets</h3>
+                            <span className="description">{playerStats.cleanSheet === null? '0' : playerStats.cleanSheet}</span>
                         </div>
                         <div className='group'>
                             <h3 className="label">Appearances</h3>
