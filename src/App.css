@@ -182,19 +182,20 @@ a {
 
 .player {
   height: 800px;
-  width: 600px;
+  width: 113.5%;
   position: absolute;
-  clip-path: inset(0px -20px 0px -200px);
+  clip-path: inset(0px 0px 0px -200px);
   left: -60px;
   bottom: 0px;
-  overflow:hidden;
+  padding-left:70px !important; 
+  overflow: hidden !important;
 }
   
 .player > img {
   width: 400px;
   position: absolute;
   top: 173px;
-
+  overflow-x: hidden;
 }
 
 @media screen and (max-width: 917px) {
