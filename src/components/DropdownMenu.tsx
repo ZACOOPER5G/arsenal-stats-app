@@ -15,6 +15,13 @@ export const DropdownMenu = (props: any): any => {
         props.player(e.target.className)
     }
 
+    const style = {
+        'height': '50px', 
+        'display': 'flex', 
+        'align-items': 'center', 
+        'width': '100%',
+    }
+
     useEffect(() => {
         setMenuHeight(dropdownRef.current?.firstChild.offsetHeight)
     }, [])
@@ -26,8 +33,15 @@ export const DropdownMenu = (props: any): any => {
 
     const DropdownItem = (props: any) => {
         return (
-            <a onClick={() => props.goToMenu && setActiveMenu(props.goToMenu)} href="#" className="menu-item">
-                <span className="icon-button">{props.leftIcon}</span>
+            <a onClick={() => {
+                        props.goToMenu && setActiveMenu(props.goToMenu);
+                    }} 
+                    href="#" className="menu-item" 
+                >
+                <span 
+                    className="icon-button"
+                    
+                >{props.leftIcon}</span>
 
                 {props.children}
 
@@ -75,7 +89,7 @@ export const DropdownMenu = (props: any): any => {
                      
                 <DropdownItem 
                     leftIcon={<ArsenalLogo style={{transform:"scale(0.8, 0.8) translateY(0.4%)"}}/>} 
-                    rightIcon={<Arrow style={{transform:"rotate(-90deg) scale(0.9, 0.9) translateX(3%) translateY(10%)"}}/>}
+                    rightIcon={<Arrow style={{transform: "rotate(90deg)"}}/>}
                     goToMenu="main"
                 >
                     Coming Soon...
@@ -99,233 +113,279 @@ export const DropdownMenu = (props: any): any => {
                 </DropdownItem>
                 <DropdownItem 
                     leftIcon={ <img src='/images/odegaard-icon.png' className='odegaard-icon' /> } 
+                    className='martin-odegaard'
                   >
-                    <p 
+                    <span 
                         className="martin-odegaard"
+                        style={style}
                         onClick={getCurrentPlayer}
                     >
                         Martin Odegaard
-                    </p>
+                    </span>
                 </DropdownItem>
                 <DropdownItem 
                     leftIcon={ <img src='/images/saka-icon.png' className='saka-icon' /> } 
+                    onClick={getCurrentPlayer}
                   >
-                    <p 
+                    <span 
                         className="bukayo-saka"
+                        style={style}
                         onClick={getCurrentPlayer}
                     >
                         Bukayo Saka
-                    </p>
+                    </span>
                 </DropdownItem>
                 <DropdownItem 
                     leftIcon={ <img src='/images/martinelli-icon.png' className='martinelli-icon' /> } 
+                    onClick={getCurrentPlayer}
                   >
-                    <p 
+                    < span
                         className="gabriel-martinelli"
+                        style={style}
                         onClick={getCurrentPlayer}
                     >
                         Gabriel Martinelli
-                    </p>
+                    </span>
                 </DropdownItem>
                 <DropdownItem 
                     leftIcon={ <img src='/images/smith-rowe-icon.png' className='smith-rowe-icon' />} 
+                    onClick={getCurrentPlayer}
                   >
-                    <p 
+                    <span 
                         className="emile-smith-rowe"
+                        style={style}
                         onClick={getCurrentPlayer}
                     >
                         Emile Smith-Rowe
-                    </p>
+                    </span>
                 </DropdownItem>
                 <DropdownItem 
                     leftIcon={ <img src='/images/jesus-icon.png' className='jesus-icon' /> } 
+                    onClick={getCurrentPlayer}
                   >
-                    <p 
+                    <span
                         className="gabriel-jesus"
+                        style={style}
                         onClick={getCurrentPlayer}
                     >
                         Gabriel Jesus
-                    </p>
+                    </span>
                 </DropdownItem>
                 <DropdownItem 
                     leftIcon={ <img src='/images/gabriel-icon.png' className='gabriel-icon' /> } 
+                    onClick={getCurrentPlayer}
                   >
-                    <p 
+                    <span 
                         className="gabriel-magalhaes"
+                        style={style}
                         onClick={getCurrentPlayer}
                     >
                         Gabriel Magalhães
-                    </p>
+                    </span>
                 </DropdownItem>
                 <DropdownItem 
                     leftIcon={ <img src='/images/partey-icon.png' className='partey-icon' /> } 
+                    onClick={getCurrentPlayer}
                   >
-                    <p 
+                    <span 
                         className="thomas-partey"
+                        style={style}
                         onClick={getCurrentPlayer}
                     >
                         Thomas Partey
-                    </p>
+                    </span>
                 </DropdownItem>
                 <DropdownItem 
                     leftIcon={ <img src='/images/xhaka-icon.png' className='xhaka-icon' /> } 
+                    onClick={getCurrentPlayer}
                   >
-                    <p 
+                    <span 
                         className="granit-xhaka"
+                        style={style}
                         onClick={getCurrentPlayer}
                     >
                         Granit Xhaka
-                    </p>
+                    </span>
                 </DropdownItem>
                 <DropdownItem 
                     leftIcon={ <img src='/images/tierney-icon.png' className='tierney-icon' /> } 
+                    onClick={getCurrentPlayer}
                   >
-                    <p 
+                    <span 
                         className="kieran-tierney"
+                        style={style}
                         onClick={getCurrentPlayer}
                     >
                         Kieran Tierney
-                    </p>
+                    </span>
                 </DropdownItem>
                 <DropdownItem 
                     leftIcon={ <img src='/images/saliba-icon.png' className='saliba-icon' /> } 
+                    onClick={getCurrentPlayer}
                   >
-                    <p 
+                    <span 
                         className="william-saliba"
+                        style={style}
                         onClick={getCurrentPlayer}
                     >
                         William Saliba
-                    </p>
+                    </span>
                 </DropdownItem>
                 <DropdownItem 
                     leftIcon={ <img src='/images/white-icon.png' className='white-icon' /> } 
+                    onClick={getCurrentPlayer}
                   >
-                    <p 
+                    <span 
                         className="ben-white"
+                        style={style}
                         onClick={getCurrentPlayer}
                     >
                         Ben White
-                    </p>
+                    </span>
                 </DropdownItem>
                 <DropdownItem 
                     leftIcon={ <img src='/images/tomiyasu-icon.png' className='tomiyasu-icon' /> } 
+                    onClick={getCurrentPlayer}
                   >
-                    <p 
+                    <span 
                         className="takehiro-tomiyasu"
+                        style={style}
                         onClick={getCurrentPlayer}
                     >
                         Takehiro Tomiyasu
-                    </p>
+                    </span>
                 </DropdownItem>
                 <DropdownItem 
                     leftIcon={ <img src='/images/ramsdale-icon.png' className='ramsdale-icon' /> } 
+                    onClick={getCurrentPlayer}
                   >
-                    <p 
+                    <span 
                         className="aaron-ramsdale"
+                        style={style}
                         onClick={getCurrentPlayer}
                     >
                         Aaron Ramsdale
-                    </p>
+                    </span>
                 </DropdownItem>
                 <DropdownItem 
                     leftIcon={ <img src='/images/zinchenko-icon.png' className='zinchenko-icon' /> } 
+                    onClick={getCurrentPlayer}
                   >
-                    <p 
+                    <span 
                         className="oleksandr-zinchenko"
+                        style={style}
                         onClick={getCurrentPlayer}
                     >
                         Oleksandr Zinchenko
-                    </p>
+                    </span>
                 </DropdownItem>
                 <DropdownItem 
                     leftIcon={ <img src='/images/lokonga-icon.png' className='lokonga-icon' /> } 
+                    onClick={getCurrentPlayer}
                   >
-                    <p 
+                    <span 
                         className="sambi-lokonga"
+                        style={style}
                         onClick={getCurrentPlayer}
                     >
                         Albert Sambi Lokonga
-                    </p>
+                    </span>
                 </DropdownItem>
                 <DropdownItem 
                     leftIcon={ <img src='/images/elneny-icon.png' className='elneny-icon' /> } 
+                    onClick={getCurrentPlayer}
                   >
-                    <p 
+                    <span 
                         className="mohamed-elneny"
+                        style={style}
                         onClick={getCurrentPlayer}
                     >
                         Mohamed Elneny
-                    </p>
+                    </span>
                 </DropdownItem>
                 <DropdownItem 
                     leftIcon={ <img src='/images/nketiah-icon.png' className='nketiah-icon' /> } 
+                    onClick={getCurrentPlayer}
                   >
-                    <p 
+                    <span 
                         className="eddie-nketiah"
+                        style={style}
                         onClick={getCurrentPlayer}
                     >
                         Eddie Nketiah
-                    </p>
+                    </span>
                 </DropdownItem>
                 <DropdownItem 
                     leftIcon={ <img src='/images/holding-icon.png' className='holding-icon' /> } 
+                    onClick={getCurrentPlayer}
                   >
-                    <p 
+                    <span 
                         className="rob-holding"
+                        style={style}
                         onClick={getCurrentPlayer}
                     >
                         Rob Holding
-                    </p>
+                    </span>
                 </DropdownItem>
                 <DropdownItem 
                     leftIcon={ <img src='/images/marquinhos-icon.png' className='marquinhos-icon' /> } 
+                    onClick={getCurrentPlayer}
                   >
-                    <p 
+                    <span 
                         className="marquinhos"
+                        style={style}
                         onClick={getCurrentPlayer}
                     >
                         Marquinhos
-                    </p>
+                    </span>
                 </DropdownItem>
                 <DropdownItem 
                     leftIcon={ <img src='/images/cedric-icon.png' className='cedric-icon' /> } 
+                    onClick={getCurrentPlayer}
                   >
-                    <p 
+                    <span 
                         className="cedric-soares"
+                        style={style}
                         onClick={getCurrentPlayer}
                     >
                         Cédric Soares
-                    </p>
+                    </span>
                 </DropdownItem>
                 <DropdownItem 
                     leftIcon={ <img src='/images/vieira-icon.png' className='vieira-icon' /> } 
+                    onClick={getCurrentPlayer}
                   >
-                    <p 
+                    <span 
                         className="fabio-vieira"
+                        style={style}
                         onClick={getCurrentPlayer}
                     >
                         Fábio Vieira
-                    </p>
+                    </span>
                 </DropdownItem>
                 <DropdownItem 
                     leftIcon={ <img src='/images/turner-icon.png' className='turner-icon' /> } 
+                    onClick={getCurrentPlayer}
                   >
-                    <p 
+                    <span 
                         className="matt-turner"
+                        style={style}
                         onClick={getCurrentPlayer}
                     >
                         Matt Turner
-                    </p>
+                    </span>
                 </DropdownItem>
                 <DropdownItem 
                     leftIcon={ <img src='/images/nelson-icon.png' className='nelson-icon' /> } 
+                    onClick={getCurrentPlayer}
                   >
-                    <p 
+                    <span 
                         className="reiss-nelson"
+                        style={style}
                         onClick={getCurrentPlayer}
                     >
                         Reiss Nelson
-                    </p>
+                    </span>
                 </DropdownItem>
                 </div>
             </CSSTransition>
