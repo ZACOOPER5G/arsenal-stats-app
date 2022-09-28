@@ -4,21 +4,21 @@ import './App.css';
 import { PlayerCard } from './components/PlayerCard';
 import { ReactComponent as Arrow} from './images/arrow.svg';
 import { DropdownMenu } from './components/DropdownMenu';
-import { useState } from 'react';
+import { useState, } from 'react';
 
 function App() {
   const [currentPlayer, setCurrentPlayer] = useState(null);
 
   const getCurrentPlayer = (player: any) => {
     setCurrentPlayer(player)
-  }
+  } 
 
   return (
     <div className="App">
       <>
-        <Navbar>
-          <NavItem icon={<Arrow />} >
-            <DropdownMenu player={getCurrentPlayer} />
+        <Navbar >
+          <NavItem icon={<Arrow />}  >
+            <DropdownMenu player={getCurrentPlayer}  />
           </NavItem>
         </Navbar>
         {
