@@ -4,6 +4,11 @@
   letter-spacing: 0.1rem;
 }
 
+App {
+  pointer-events: none;
+
+}
+
 body {
 
   background-color: rgba(0, 0, 0, 0.25);
@@ -97,6 +102,7 @@ a {
   z-index: 1000;
   padding: 1rem;
   overflow: hidden;
+  min-height: 130px;
   max-height: 600px;
   transition: height 500ms ease;
   overflow: scroll;
@@ -183,6 +189,7 @@ a {
   position: relative;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
   z-index: -1;
+  pointer-events: none;
 }
 
 .player {
@@ -193,6 +200,7 @@ a {
   left: -250px;
   bottom: 0px;
   overflow: hidden !important;
+  pointer-events: none;
 }
   
 .player > img {
@@ -293,6 +301,7 @@ a {
     position: relative;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
     z-index: -1;
+    pointer-events: none;
   }
 
   .home-img {
@@ -330,7 +339,9 @@ a {
   justify-content: space-between;
   float: right;
   padding: 20px;
-  z-index: 1100;
+  z-index: 11;
+  pointer-events: none;
+
 }
 
 .stats-container-home {
@@ -382,7 +393,6 @@ a {
 }
 
 .Saka {
-  /* position: absolute; */
   transform: translateX(55%) translateY(55%) scale(1.8);
   mask-image: linear-gradient(to top left, transparent 1%, white, black);
 }
@@ -485,4 +495,31 @@ a {
   transform: scale(0.035) !important;
   opacity: 0.65 !important;
   clip-path: none !important;
+}
+
+.pages {
+  display: flex;
+  background: red;
+  z-index: 100;
+  position: absolute;
+  left: 85%;
+  top: 88%;
+  height: 30px;
+  align-items: center;
+  align-content: center;
+  pointer-events: none;
+}
+
+.pages > h3 {
+  font-size: 14px !important;
+}
+
+.page {
+  position: relative;
+  pointer-events: visible;
+}
+
+.page:hover {
+  z-index: 1000000000;
+  cursor: pointer;
 }
