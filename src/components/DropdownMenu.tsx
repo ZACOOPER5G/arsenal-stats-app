@@ -28,7 +28,7 @@ export const DropdownMenu = (props: any): any => {
 
     const calcHeight = (el: any) => {
         const height = el.offsetHeight
-        setMenuHeight(menuHeight)
+        setMenuHeight(height)
     }
 
     const DropdownItem = (props: any) => {
@@ -102,6 +102,7 @@ export const DropdownMenu = (props: any): any => {
                 unmountOnExit 
                 timeout={500}
                 classNames="menu-secondary"
+                onEnter={calcHeight}
             >
                  <div className='menu'>
                      
