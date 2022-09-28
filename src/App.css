@@ -98,6 +98,11 @@ a {
   overflow: hidden;
   max-height: 600px;
   transition: height 500ms ease;
+  overflow: scroll;
+}
+
+.dropdown::-webkit-scrollbar {
+  display: none;
 }
 
 .menu-item {
