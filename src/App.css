@@ -97,7 +97,6 @@ a {
   padding: 1rem;
   overflow: hidden;
   max-height: 600px;
-  overflow: scroll;
   transition: height 500ms ease;
 }
 
@@ -326,7 +325,6 @@ a {
   float: right;
   padding: 20px;
   z-index: 1100;
-  overflow: scroll;
 }
 
 .stats-container-home {
