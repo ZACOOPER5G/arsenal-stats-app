@@ -82,7 +82,7 @@ export const DropdownMenu = (props: any): any => {
                 in={activeMenu === 'team'} 
                 unmountOnExit 
                 timeout={500}
-                classNames="menu-primary"
+                classNames="menu-secondary"
                 onEnter={calcHeight}
             >
                  <div className='menu'>
