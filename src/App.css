@@ -30,7 +30,8 @@ a {
   height: 60px;
   background-color:#191b21;
   padding: 0 1rem;
-  border-bottom: 1px solid #474a4d
+  border-bottom: 1px solid #474a4d;
+  border-radius: 10px;
 }
 
 .navbar-nav {
@@ -169,7 +170,7 @@ a {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100vh;
+  min-height: 800px; 
 }
 
 .card {
@@ -185,7 +186,7 @@ a {
 }
 
 .player {
-  height: 800px;
+  min-height: 800px;
   width: 113.5%;
   position: absolute;
   clip-path: inset(0px 0px 0px -500px);
@@ -251,7 +252,7 @@ a {
 
 @media screen and (max-width: 520px) {
   .player {
-    width: 168%;
+    width: 165%;
   }
 
   .player > img {
@@ -387,7 +388,7 @@ a {
 }
 
 .Martinelli {
-  transform: translateX(2%) translateY(10%) scale(1.1)
+  transform: translateX(40%) translateY(10%) scale(1.1)
 }
 
 .Smith-Rowe {
