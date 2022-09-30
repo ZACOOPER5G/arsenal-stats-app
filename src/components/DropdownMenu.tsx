@@ -12,7 +12,9 @@ export const DropdownMenu = (props: any): any => {
     const dropdownRef = useRef<any>(null);
 
     const getCurrentPlayer = (e: any) => {
-        props.player(e.target.className)
+        props.player(e.target.className);
+        props.menu(!props.menu);
+        props.changePage();
     }
 
     const style = {
