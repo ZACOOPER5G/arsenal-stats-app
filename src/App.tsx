@@ -6,6 +6,7 @@ import { ReactComponent as Arrow} from './images/arrow.svg';
 import { DropdownMenu } from './components/DropdownMenu';
 import { useState, } from 'react';
 import { Button } from './components/Button';
+import { Home } from './components/Home';
 
 function App() {
   const [currentPlayer, setCurrentPlayer] = useState(null);
@@ -18,14 +19,18 @@ function App() {
 
   const setMenuClose = (value: any) => {
     setMenuOpen(value);
-  }
+  };
+
+  const changePage = () => {
+    setPage(1)
+  };
 
   return (
     <div className="App">
       <>
         <Navbar >
           <NavItem icon={<Arrow />} menu={menuOpen} setMenu={setMenuClose} >
-            <DropdownMenu player={getCurrentPlayer} menu={setMenuClose} />
+            <DropdownMenu player={getCurrentPlayer} menu={setMenuClose} changePage={changePage} />
           </NavItem>
         </Navbar>
         {
@@ -36,16 +41,7 @@ function App() {
             </div>
 
           ) :
-          <div className="container">
-            <div className="card">
-              <h1 className='intro-menu'>Use the menu in the top right to select a player!</h1>
-              <img className="home-img" src='./images/arsenal-team.png' alt='home-banner' />
-              <div className="stats-container-home">
-                <h1 className='description'>Welcome to the Arsenal Fan Stat Tracker. Select any one of your favourite players from the arsenal starting XI to see how they have been performing this season in the Premier League.</h1>
-                <h1 className='description'>Check back in throughout the season for new updates, and happy tracking!</h1>
-              </div>
-            </div>
-          </div> 
+          <Home />
         }
         
 
