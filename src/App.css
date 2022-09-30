@@ -99,13 +99,13 @@ a {
   transform: translateX(-45%);
   border-radius: 10px;
   background-color:#191b21;
-  z-index: 1000;
   padding: 1rem;
   overflow: hidden;
   min-height: 130px;
   max-height: 600px;
   transition: height 500ms ease;
   overflow: scroll;
+  z-index: 1;
 }
 
 .dropdown::-webkit-scrollbar {
@@ -177,6 +177,7 @@ a {
   align-items: center;
   width: 100%;
   min-height: 800px; 
+  z-index: -1;
 }
 
 .card {
@@ -189,7 +190,6 @@ a {
   position: relative;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
   z-index: -1;
-  pointer-events: none;
 }
 
 .player {
@@ -207,12 +207,10 @@ a {
   width: 400px;
   position: absolute;
   top: 173px;
-  /* overflow-x: hidden; */
 }
 
 @media screen and (max-width: 917px) {
   .player > img {
-    z-index: -100;
     opacity: 50%;
   }
 
@@ -265,7 +263,6 @@ a {
 
   .player > img {
     opacity: 30%;
-    z-index: 1;
   }
 
   .container {
@@ -300,7 +297,6 @@ a {
     height: 90vh;
     position: relative;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
-    z-index: -1;
     pointer-events: none;
   }
 
@@ -321,7 +317,6 @@ a {
   font-weight: 700;
   letter-spacing: 0.06em;
   text-shadow: 0.05em 0 0 #d70435, 0.1em 0 0 #0f4c94;
-  z-index: -1;
   margin: 0;
   line-height: 1;
 }
@@ -339,9 +334,7 @@ a {
   justify-content: space-between;
   float: right;
   padding: 20px;
-  z-index: 11;
-  pointer-events: none;
-
+  z-index: 0;
 }
 
 .stats-container-home {
@@ -357,8 +350,8 @@ a {
   justify-content: space-between;
   float: right;
   padding: 20px;
-  z-index: 1100;
   overflow: none;
+  z-index: 0;
 }
 
 .group {
@@ -381,7 +374,6 @@ a {
 
 .description {
   font-size: 1.25rem;
-  z-index: 100000;
 }
 
 .intro-menu {
@@ -500,14 +492,14 @@ a {
 .pages {
   display: flex;
   background: red;
-  z-index: 100;
   position: absolute;
   left: 85%;
   top: 88%;
   height: 30px;
   align-items: center;
   align-content: center;
-  pointer-events: none;
+  user-select: all;
+  z-index: 1;
 }
 
 .pages > h3 {
@@ -515,11 +507,9 @@ a {
 }
 
 .page {
-  position: relative;
-  pointer-events: visible;
+  user-select: all;
 }
 
 .page:hover {
-  z-index: 1000000000;
   cursor: pointer;
 }

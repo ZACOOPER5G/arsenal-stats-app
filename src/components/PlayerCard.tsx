@@ -1,15 +1,15 @@
-import axios from 'axios'
-import { ReactNode, useEffect, useState } from 'react'
-import playerData from '../data/players.json'
+import axios from 'axios';
+import { ReactNode, useEffect, useState } from 'react';
+import playerData from '../data/players.json';
 
 interface PlayerCardStats {
     [name: string] : ReactNode;
 };
 
 export const PlayerCard = (props: any) => {
-    const [playerStats, setPlayerStats] = useState<PlayerCardStats>({})
-    const [isGK, setIsGK] = useState<boolean>(false)
-    const [page, setPage] = useState<number>(1)
+    const [playerStats, setPlayerStats] = useState<PlayerCardStats>({});
+    const [isGK, setIsGK] = useState<boolean>(false);
+    const [page, setPage] = useState<number>(1);
 
     // retrieves player object
     let playerObj = playerData.find(item => {
@@ -18,14 +18,13 @@ export const PlayerCard = (props: any) => {
         }
     });
 
-    let playerKey = playerObj?.id
-    let playerImg = playerObj?.imageUrl
-    let playerName = playerObj?.name
-    let playerPosition = playerObj?.position
-    let playerNationality = playerObj?.nationality
-    let playerAge = playerObj?.age
-    let playerDOB = playerObj?.dob
-    let playerHeight = playerObj?.height
+    let playerImg = playerObj?.imageUrl;
+    let playerName = playerObj?.name;
+    let playerPosition = playerObj?.position;
+    let playerNationality = playerObj?.nationality;
+    let playerAge = playerObj?.age;
+    let playerDOB = playerObj?.dob;
+    let playerHeight = playerObj?.height;
 
     useEffect(() => {
         if (playerPosition === "GK") {
@@ -61,7 +60,7 @@ export const PlayerCard = (props: any) => {
     return (
         <div className='container'>
           {(() => {
-            if (!isGK && page === 1) {
+            if (!isGK && props.page === 1) {
               return (
                 <div className="card">
                     <div className="player">
@@ -120,14 +119,9 @@ export const PlayerCard = (props: any) => {
                             <span className="description">{playerStats.appearances === null || !playerStats.appearances ? '0' : playerStats.keyPasses}</span>
                         </div>
                     </div>
-                    <span className='pages' >
-                        <h3>Page {page}</h3>
-                        <button className="page" onClick={() => setPage(2)} >Next</button>
-                    </span>
-
                 </div>
               )
-            } else if (isGK && page === 1) {
+            } else if (isGK && props.page === 1) {
               return (
                 <div className="card">
                     <div className="player">
@@ -172,7 +166,7 @@ export const PlayerCard = (props: any) => {
                     </div>
                 </div>
               )
-            } else if (!isGK && page === 2) {
+            } else if (!isGK && props.page === 2) {
               return (
                 <div className="card">
                     <div className="player">
@@ -183,7 +177,7 @@ export const PlayerCard = (props: any) => {
                     </div>
                     <div className="stats-container" >
                         <div className="group">
-                            <h3 className="label">Position</h3>
+                            <h3 className="label">You're on a new page!~</h3>
                             <span className="description">{playerPosition}</span>
                         </div>
                         <div className='group'>
@@ -231,12 +225,6 @@ export const PlayerCard = (props: any) => {
                             <span className="description">{playerStats.appearances === null || !playerStats.appearances ? '0' : playerStats.keyPasses}</span>
                         </div>
                     </div>
-                    <span className='pages' >
-                        <button className="page" onClick={() => setPage(1)} >Previous</button>
-                        <h3>Page {page}</h3>
-                        <button className="page">Next</button>
-                    </span>
-
                 </div>
               )
             }
