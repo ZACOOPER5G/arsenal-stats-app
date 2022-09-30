@@ -491,15 +491,19 @@ a {
 
 .pages {
   display: flex;
-  background: red;
+  gap: 10px;
   position: absolute;
   left: 85%;
   top: 88%;
   height: 30px;
   align-items: center;
   align-content: center;
-  user-select: all;
   z-index: 1;
+}
+
+.previous {
+  position: absolute;
+  transform: translateX(-110%);
 }
 
 .pages > h3 {
