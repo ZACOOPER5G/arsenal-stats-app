@@ -4,26 +4,33 @@ import './App.css';
 import { PlayerCard } from './components/PlayerCard';
 import { ReactComponent as Arrow} from './images/arrow.svg';
 import { DropdownMenu } from './components/DropdownMenu';
-import { useState } from 'react';
+import { useState, } from 'react';
+import { Button } from './components/Button';
 
 function App() {
   const [currentPlayer, setCurrentPlayer] = useState(null);
+  const [page, setPage] = useState(1);
 
   const getCurrentPlayer = (player: any) => {
     setCurrentPlayer(player)
-  }
+  };
 
   return (
     <div className="App">
       <>
-        <Navbar>
-          <NavItem icon={<Arrow />} >
-            <DropdownMenu player={getCurrentPlayer} />
+        <Navbar >
+          <NavItem icon={<Arrow />}  >
+            <DropdownMenu player={getCurrentPlayer}  />
           </NavItem>
         </Navbar>
         {
-          currentPlayer ? 
-          <PlayerCard player={currentPlayer} /> :
+          currentPlayer ? (
+            <div>
+              <PlayerCard player={currentPlayer} page={page} />
+              <Button page={page} handleIncrease={() => setPage(page + 1)} handleDecrease={() => setPage(page - 1)} />
+            </div>
+
+          ) :
           <div className="container">
             <div className="card">
               <h1 className='intro-menu'>Use the menu in the top right to select a player!</h1>

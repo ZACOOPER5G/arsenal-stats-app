@@ -4,6 +4,11 @@
   letter-spacing: 0.1rem;
 }
 
+App {
+  pointer-events: none;
+
+}
+
 body {
 
   background-color: rgba(0, 0, 0, 0.25);
@@ -94,12 +99,13 @@ a {
   transform: translateX(-45%);
   border-radius: 10px;
   background-color:#191b21;
-  z-index: 1000;
   padding: 1rem;
   overflow: hidden;
+  min-height: 130px;
   max-height: 600px;
   transition: height 500ms ease;
   overflow: scroll;
+  z-index: 1;
 }
 
 .dropdown::-webkit-scrollbar {
@@ -171,6 +177,7 @@ a {
   align-items: center;
   width: 100%;
   min-height: 800px; 
+  z-index: -1;
 }
 
 .card {
@@ -193,18 +200,17 @@ a {
   left: -250px;
   bottom: 0px;
   overflow: hidden !important;
+  pointer-events: none;
 }
   
 .player > img {
   width: 400px;
   position: absolute;
   top: 173px;
-  /* overflow-x: hidden; */
 }
 
 @media screen and (max-width: 917px) {
   .player > img {
-    z-index: -100;
     opacity: 50%;
   }
 
@@ -257,7 +263,6 @@ a {
 
   .player > img {
     opacity: 30%;
-    z-index: 1;
   }
 
   .container {
@@ -292,7 +297,7 @@ a {
     height: 90vh;
     position: relative;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
-    z-index: -1;
+    pointer-events: none;
   }
 
   .home-img {
@@ -312,7 +317,6 @@ a {
   font-weight: 700;
   letter-spacing: 0.06em;
   text-shadow: 0.05em 0 0 #d70435, 0.1em 0 0 #0f4c94;
-  z-index: -1;
   margin: 0;
   line-height: 1;
 }
@@ -330,7 +334,7 @@ a {
   justify-content: space-between;
   float: right;
   padding: 20px;
-  z-index: 1100;
+  z-index: 0;
 }
 
 .stats-container-home {
@@ -346,8 +350,8 @@ a {
   justify-content: space-between;
   float: right;
   padding: 20px;
-  z-index: 1100;
   overflow: none;
+  z-index: 0;
 }
 
 .group {
@@ -370,7 +374,6 @@ a {
 
 .description {
   font-size: 1.25rem;
-  z-index: 100000;
 }
 
 .intro-menu {
@@ -382,7 +385,6 @@ a {
 }
 
 .Saka {
-  /* position: absolute; */
   transform: translateX(55%) translateY(55%) scale(1.8);
   mask-image: linear-gradient(to top left, transparent 1%, white, black);
 }
@@ -485,4 +487,29 @@ a {
   transform: scale(0.035) !important;
   opacity: 0.65 !important;
   clip-path: none !important;
+}
+
+.pages {
+  display: flex;
+  background: red;
+  position: absolute;
+  left: 85%;
+  top: 88%;
+  height: 30px;
+  align-items: center;
+  align-content: center;
+  user-select: all;
+  z-index: 1;
+}
+
+.pages > h3 {
+  font-size: 14px !important;
+}
+
+.page {
+  user-select: all;
+}
+
+.page:hover {
+  cursor: pointer;
 }
