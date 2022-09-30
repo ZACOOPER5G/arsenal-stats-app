@@ -10,17 +10,22 @@ import { Button } from './components/Button';
 function App() {
   const [currentPlayer, setCurrentPlayer] = useState(null);
   const [page, setPage] = useState(1);
+  const [menuOpen, setMenuOpen] = useState(false);
 
-  const getCurrentPlayer = (player: any) => {
-    setCurrentPlayer(player)
+  const getCurrentPlayer = (player: any, value: boolean) => {
+    setCurrentPlayer(player);
   };
+
+  const setMenuClose = (value: any) => {
+    setMenuOpen(value);
+  }
 
   return (
     <div className="App">
       <>
         <Navbar >
-          <NavItem icon={<Arrow />}  >
-            <DropdownMenu player={getCurrentPlayer}  />
+          <NavItem icon={<Arrow />} menu={menuOpen} setMenu={setMenuClose} >
+            <DropdownMenu player={getCurrentPlayer} menu={setMenuClose} />
           </NavItem>
         </Navbar>
         {
