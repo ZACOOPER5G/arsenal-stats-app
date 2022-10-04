@@ -34,13 +34,12 @@ function App() {
           </NavItem>
         </Navbar>
         {
-          currentPlayer ? (
+          currentPlayer ? 
             <div>
               <PlayerCard player={currentPlayer} page={page} />
               <Button page={page} handleIncrease={() => setPage(page + 1)} handleDecrease={() => setPage(page - 1)} />
             </div>
-
-          ) :
+           :
           <Home />
         }
         
