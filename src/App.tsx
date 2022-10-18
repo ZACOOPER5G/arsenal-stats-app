@@ -11,13 +11,17 @@ import { ArsenalCard } from './components/ArsenalCard';
 
 function App() {
   const [currentPlayer, setCurrentPlayer] = useState(null);
-  const [teamActive, setTeamActive] = useState(true);
+  const [teamActive, setTeamActive] = useState(false);
   const [page, setPage] = useState(1);
   const [menuOpen, setMenuOpen] = useState(false);
 
   const getCurrentPlayer = (player: any) => {
     setCurrentPlayer(player);
   };
+
+  const getTeamActive = (answer: boolean) => {
+    setTeamActive(answer)
+  }
 
   const setMenuClose = (value: any) => {
     setMenuOpen(value);
@@ -32,7 +36,7 @@ function App() {
       <>
         <Navbar >
           <NavItem icon={<Arrow />} menu={menuOpen} setMenu={setMenuClose} >
-            <DropdownMenu player={getCurrentPlayer} menu={setMenuClose} changePage={changePage} />
+            <DropdownMenu player={getCurrentPlayer} menu={setMenuClose} changePage={changePage} team={getTeamActive} />
           </NavItem>
         </Navbar>
         {(() => {
