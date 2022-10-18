@@ -1,15 +1,12 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 
 export const NavItem = (props: any) => {
-    const [open, setOpen]  = useState<Boolean>(false);
-
     const menuRef: any = useRef();
 
     useEffect(() => {
-      console.log(props.menu)
       let handler = (event: any) => {
         if (!menuRef.current?.contains(event.target)) {
-          setOpen(false)
+          props.setMenu(false)
         }
       }
       document.addEventListener("mousedown", handler);

@@ -6,7 +6,6 @@ import { useRef } from 'react';
 
 export const DropdownMenu = (props: any): any => {
     const [activeMenu, setActiveMenu] = useState<string>('main');
-
     const [menuHeight, setMenuHeight] = useState(null);
 
     const dropdownRef = useRef<any>(null);
@@ -15,23 +14,30 @@ export const DropdownMenu = (props: any): any => {
         props.player(e.target.className);
         props.menu(!props.menu);
         props.changePage();
-    }
+        props.team(false);
+    };
+
+    const getTeamActive = () => {
+        props.team(true);
+        props.menu(!props.menu);
+        props.player(null);
+    };
 
     const style = {
         'height': '50px', 
         'display': 'flex', 
         'align-items': 'center', 
         'width': '100%',
-    }
+    };
 
     useEffect(() => {
         setMenuHeight(dropdownRef.current?.firstChild.offsetHeight)
-    }, [])
+    }, []);
 
     const calcHeight = (el: any) => {
         const height = el.offsetHeight
         setMenuHeight(height)
-    }
+    };
 
     const DropdownItem = (props: any) => {
         return (
@@ -65,10 +71,13 @@ export const DropdownMenu = (props: any): any => {
                      
                 <DropdownItem 
                     leftIcon={<ArsenalLogo style={{transform:"scale(0.8, 0.8) translateY(0.4%)"}}/>} 
-                    rightIcon={<Arrow style={{transform:"rotate(-90deg) scale(0.9, 0.9) translateX(3%) translateY(10%)"}}/>}
-                    goToMenu="team" 
                 >
-                    Team Stats
+                    <span 
+                        style={style}
+                        onClick={getTeamActive}
+                    > 
+                        Team Stats
+                    </span>
                 </DropdownItem>
                 <DropdownItem 
                     goToMenu="players" 
@@ -78,24 +87,6 @@ export const DropdownMenu = (props: any): any => {
                     Player Stats
                 </DropdownItem>
 
-                </div>
-            </CSSTransition>
-            <CSSTransition 
-                in={activeMenu === 'team'} 
-                unmountOnExit 
-                timeout={500}
-                classNames="menu-secondary"
-                onEnter={calcHeight}
-            >
-                 <div className='menu'>
-                     
-                <DropdownItem 
-                    leftIcon={<ArsenalLogo style={{transform:"scale(0.8, 0.8) translateY(0.4%)"}}/>} 
-                    rightIcon={<Arrow style={{transform: "rotate(90deg)"}}/>}
-                    goToMenu="main"
-                >
-                    Coming Soon...
-                </DropdownItem>
                 </div>
             </CSSTransition>
 

@@ -70,7 +70,6 @@ a {
 .icon-button {
   height: 2rem;
   width: 2rem;
-  background-color: #DB0007;
   border-radius: 50%;
   margin: 2px;
   display: flex;
@@ -209,6 +208,11 @@ a {
   top: 173px;
 }
 
+.arsenal-logo {
+  position: absolute;
+  transform: translateX(65%) translateY(30%)
+}
+
 @media screen and (max-width: 917px) {
   .player > img {
     opacity: 50%;
@@ -219,7 +223,7 @@ a {
   }
 
   .stats-container-home {
-    height: 80% !important;
+    min-height: 80% !important;
   }
 }
 
@@ -230,7 +234,7 @@ a {
 
   .stats-container-home {
     width: 99.9% !important;
-    height: 70% !important;
+    min-height: 70% !important;
   }
 }
 
@@ -241,7 +245,7 @@ a {
 
   .stats-container-home {
     width: 99.9% !important;
-    height: 70% !important;
+    min-height: 70% !important;
   }
 
   .pages {
@@ -251,12 +255,13 @@ a {
 
 @media screen and (max-width: 454px) {
   .home-img {
-    transform: translateX(0%) translateY(0%) scale(0.6) !important;
+    transform: translateX(0%) translateY(-29.5%) scale(0.6) !important;
   }
 
   .stats-container-home {
     width: 99.9% !important;
     height: 70% !important;
+    overflow: hidden;
   }
 
 }
