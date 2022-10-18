@@ -1,66 +1,85 @@
+import { useEffect, useState } from 'react';
 import ArsenalLogo from '../images/arsenal-logo.svg';
 
 export const ArsenalCard = () => {
+    const [teamData, setTeamData] = useState({})
 
-    
+    const axios = require("axios");
+
+    const options = {
+    method: 'GET',
+    url: 'https://footapi7.p.rapidapi.com/api/tournament/17/season/41886/standings/total',
+    headers: {
+        'X-RapidAPI-Key': '27d1c8b018mshf0fd64efe848ad6p1be2b4jsn632339a8f382',
+        'X-RapidAPI-Host': 'footapi7.p.rapidapi.com'
+    }
+    };
+
+    const getTeamData = () => {
+        axios.request(options)
+        .then((res: any) => {
+            setTeamData(res.data.statistics)
+            console.log(teamData)
+        })
+        .catch((err: any) => {
+            console.log(err)
+        })
+    };
+
+    useEffect(() => {
+        getTeamData()
+    }, [teamData]);
+
 
     return (
         <div className="container">
             <div className="card">
                 <div className="player">
-                    <img src={ArsenalLogo} alt={'arsenal'} className={'playerName'} />
+                    <img src={ArsenalLogo} alt={'arsenal'} className='arsenal-logo' />
                 </div>
                 <div className="player-name">
                     Arsenal
                 </div>
                 <div className="stats-container" >
                     <div className="group">
-                        <h3 className="label">Position</h3>
-                        <span className="description">{'playerPosition'}</span>
+                        <h3 className="label">Current Position</h3>
+                        <span className="description">1</span>
                     </div>
                     <div className='group'>
-                        <h3 className="label">Nationality</h3>
-                        <span className="description">{'playerNationality'}</span>
+                        <h3 className="label">Wins</h3>
+                        <span className="description">9</span>
                     </div>
                     <div className='group'>
-                        <h3 className="label">Age</h3>
-                        <span className="description">{'playerAge'}</span>
+                        <h3 className="label">Losses</h3>
+                        <span className="description">1</span>
                     </div>
                     <div className='group'>
-                        <h3 className="label">DOB</h3>
-                        <span className="description">{'playerDOB'}</span>
+                        <h3 className="label">Draws</h3>
+                        <span className="description">0</span>
                     </div>
                     <div className='group'>
-                        <h3 className="label">Height</h3>
-                        <span className="description">{'playerHeight'}</span>
+                        <h3 className="label">Goals Scored</h3>
+                        <span className="description">24</span>
                     </div>
                     <div className='group'>
-                        <h3 className="label">Goals</h3>
-                        <span className="description">{''}</span>
+                        <h3 className="label">Goals Conceded</h3>
+                        <span className="description">10</span>
                     </div>
                     <div className='group'>
-                        <h3 className="label">Assists</h3>
-                        <span className="description">{'playerStats.assists === null || !playerStats.appearances ? : playerStats.assists'}</span>
+                        <h3 className="label">Goal Difference</h3>
+                        <span className="description">+14</span>
                     </div>
                     <div className='group'>
-                        <h3 className="label">Appearances</h3>
-                        <span className="description">{'playerStats.appearances === null || !playerStats.appearances ? : playerStats.appearances'}</span>
+                        <h3 className="label">Possession %</h3>
+                        <span className="description">56.6%</span>
                     </div>
                     <div className='group'>
-                        <h3 className="label">Matches Started</h3>
-                        <span className="description">{'playerStats.matchesStarted === null || !playerStats.matchesStarted ? : playerStats.matchesStarted'}</span>
+                        <h3 className="label">Pass %</h3>
+                        <span className="description">85.0%</span>
                     </div>
                     <div className='group'>
-                        <h3 className="label">Goals/Assists</h3>
-                        <span className="description">{'playerStats.goalsAssistsSum === null || !playerStats.goalsAssistsSum ? : playerStats.goalsAssistsSum'}</span>
-                    </div>
-                    <div className='group'>
-                        <h3 className="label">Minutes Played</h3>
-                        <span className="description">{'playerStats.minutesPlayed === null || !playerStats.minutesPlayed ? : playerStats.minutesPlayed'}</span>
-                    </div>
-                    <div className='group'>
-                        <h3 className="label">Key Passes</h3>
-                        <span className="description">{'playerStats.keyPasses === null || !playerStats.keyPasses ? : playerStats.keyPasses'}</span>
+                        <h3 className="label">Rating</h3>
+                        <span className="description">6.85</span>
                     </div>
                 </div>
             </div>
