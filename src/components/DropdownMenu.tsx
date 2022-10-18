@@ -26,7 +26,7 @@ export const DropdownMenu = (props: any): any => {
     const style = {
         'height': '50px', 
         'display': 'flex', 
-        'align-items': 'center', 
+        'alignItems': 'center', 
         'width': '100%',
     };
 
