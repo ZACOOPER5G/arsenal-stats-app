@@ -1,16 +1,17 @@
-
+import ArsenalLogo from '../images/arsenal-logo.svg';
 
 export const ArsenalCard = () => {
 
+    
 
     return (
         <div className="container">
             <div className="card">
                 <div className="player">
-                    <img src={'playerImg'} alt={'playerName'} className={'playerName'} />
+                    <img src={ArsenalLogo} alt={'arsenal'} className={'playerName'} />
                 </div>
                 <div className="player-name">
-                    {'playerName'}
+                    Arsenal
                 </div>
                 <div className="stats-container" >
                     <div className="group">
