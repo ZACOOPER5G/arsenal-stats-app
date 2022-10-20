@@ -2,13 +2,17 @@ import { useEffect, useState } from 'react';
 import ArsenalLogo from '../images/arsenal-logo.svg';
 
 export const ArsenalCard = () => {
-    const [teamData, setTeamData] = useState({})
+    interface TeamDataProps {
+        topPlayers: any
+    }
+
+    const [teamData, setTeamData] = useState<TeamDataProps>()
 
     const axios = require("axios");
 
     const options = {
         method: 'GET',
-        url: 'https://footapi7.p.rapidapi.com/api/team/751782/tournament/17/season/41886/best-players',
+        url: 'https://footapi7.p.rapidapi.com/api/team/42/tournament/17/season/41886/best-players',
         headers: {
             'X-RapidAPI-Key': '27d1c8b018mshf0fd64efe848ad6p1be2b4jsn632339a8f382',
             'X-RapidAPI-Host': 'footapi7.p.rapidapi.com'
@@ -19,7 +23,7 @@ export const ArsenalCard = () => {
         axios.request(options)
         .then((res: any) => {
             setTeamData(res.data)
-            console.log(teamData)
+            console.log(res.data)
         })
         .catch((err: any) => {
             console.log(err)
@@ -43,44 +47,43 @@ export const ArsenalCard = () => {
                 <div className="stats-container" >
                     <div className="group">
                         <h3 className="label">Goals Leader</h3>
-                        {/* @ts-ignore */}
-                        <span className="description">teamData.topPlayers.goals['0'].player.shortName</span>
+                        <span className="description">{teamData?.topPlayers.goals['0'].player.shortName}</span>
                     </div>
                     <div className='group'>
                         <h3 className="label">Assists Leader</h3>
-                        <span className="description">9</span>
+                        <span className="description">{teamData?.topPlayers.assists['0'].player.shortName}</span>
                     </div>
                     <div className='group'>
                         <h3 className="label">Goals/Assists Leader</h3>
-                        <span className="description">1</span>
+                        <span className="description">{teamData?.topPlayers.goalsAssistsSum['0'].player.shortName}</span>
                     </div>
                     <div className='group'>
                         <h3 className="label">Accurate Pass Leader</h3>
-                        <span className="description">0</span>
+                        <span className="description">{teamData?.topPlayers.accuratePasses['0'].player.shortName}</span>
                     </div>
                     <div className='group'>
-                        <h3 className="label">Rattings Leader</h3>
-                        <span className="description">24</span>
+                        <h3 className="label">Ratings Leader</h3>
+                        <span className="description">{teamData?.topPlayers.rating['0'].player.shortName}</span>
                     </div>
                     <div className='group'>
                         <h3 className="label">Tackles Leader</h3>
-                        <span className="description">10</span>
+                        <span className="description">{teamData?.topPlayers.tackles['0'].player.shortName}</span>
                     </div>
                     <div className='group'>
                         <h3 className="label">Key Passes Leader</h3>
-                        <span className="description">+14</span>
+                        <span className="description">{teamData?.topPlayers.keyPasses['0'].player.shortName}</span>
                     </div>
                     <div className='group'>
                         <h3 className="label">Successful Dribbles Leader</h3>
-                        <span className="description">56.6%</span>
+                        <span className="description">{teamData?.topPlayers.successfulDribbles['0'].player.shortName}</span>
                     </div>
                     <div className='group'>
                         <h3 className="label">Yellow Card Leader</h3>
-                        <span className="description">85.0%</span>
+                        <span className="description">{teamData?.topPlayers.yellowCards['0'].player.shortName}</span>
                     </div>
                     <div className='group'>
                         <h3 className="label">Red Card Leader</h3>
-                        <span className="description">6.85</span>
+                        <span className="description">{teamData?.topPlayers.redCards === null ? 'None' : teamData?.topPlayers.redCards['0'].player.shortName }</span>
                     </div>
                 </div>
             </div>
