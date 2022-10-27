@@ -21,7 +21,7 @@ function App() {
 
   const getTeamActive = (answer: boolean) => {
     setTeamActive(answer)
-  }
+  };
 
   const setMenuClose = (value: any) => {
     setMenuOpen(value);
