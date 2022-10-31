@@ -270,6 +270,10 @@ a {
     height: 70% !important;
     overflow: hidden;
   }
+
+  .error-msg {
+    transform: translateY(-300%) !important;
+  }
 }
 
 @media screen and (max-width: 520px) {
