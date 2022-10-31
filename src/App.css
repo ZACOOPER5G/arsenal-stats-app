@@ -230,7 +230,7 @@ a {
 
 @media screen and (max-width: 727px) {
   .error-msg {
-    transform: translateY(-220%) translateX(-1%) !important;
+    transform: translateY(-480%) !important;
   }
 }
 
@@ -324,10 +324,6 @@ a {
     position: absolute;
     top: 740px !important;
     left: 65% !important;
-  }
-
-  .error-msg {
-    transform: translateY(-100%) translateX(-2%) !important;
   }
 }
 
@@ -598,7 +594,8 @@ a {
   background:rgba(231, 210, 107, 0.797);
   border-radius: 12px;
   padding: 5px;
-  transform: translateY(-300%) translateX(-1%);
+  transform: translateY(-670%);
+  max-width: 95%
 }
 
 .error {

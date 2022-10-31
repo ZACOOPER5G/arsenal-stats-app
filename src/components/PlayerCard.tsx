@@ -64,14 +64,14 @@ export const PlayerCard = (props: any) => {
 
     return (
         <div className='container'>
+            {limit && 
+                <>
+                    <LimitMessage />
+                </>}
           {(() => {
             if (!isGK && props.page === 1) {
               return (
                 <div className="card">
-                    {limit && 
-                    <>
-                        <LimitMessage />
-                    </>}
                     <div className="player">
                         <img src={playerImg} alt={playerName} className={playerName} />
                     </div>
