@@ -599,7 +599,8 @@ a {
   border-radius: 12px;
   padding: 5px;
   transform: translateY(-670%);
-  max-width: 95%
+  max-width: 898px;
+  width: 95%;
 }
 
 .error {
