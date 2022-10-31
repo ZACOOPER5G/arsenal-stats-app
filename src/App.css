@@ -37,6 +37,7 @@ a {
   padding: 0 1rem;
   border-bottom: 1px solid #474a4d;
   border-radius: 10px;
+  z-index: 0;
 }
 
 .navbar-nav {
@@ -269,7 +270,6 @@ a {
     height: 70% !important;
     overflow: hidden;
   }
-
 }
 
 @media screen and (max-width: 520px) {
@@ -327,7 +327,7 @@ a {
   }
 
   .error-msg {
-    transform: translateY(-150%) translateX(-2%) !important;
+    transform: translateY(-100%) translateX(-2%) !important;
   }
 }
 
