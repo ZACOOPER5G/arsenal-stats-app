@@ -37,6 +37,7 @@ a {
   padding: 0 1rem;
   border-bottom: 1px solid #474a4d;
   border-radius: 10px;
+  z-index: 0;
 }
 
 .navbar-nav {
@@ -227,6 +228,12 @@ a {
   }
 }
 
+@media screen and (max-width: 727px) {
+  .error-msg {
+    transform: translateY(-480%) !important;
+  }
+}
+
 @media screen and (max-width: 789px) {
   .home-img {
     transform: translateX(30%) translateY(-27%) scale(0.9) !important;
@@ -264,6 +271,9 @@ a {
     overflow: hidden;
   }
 
+  .error-msg {
+    transform: translateY(-300%) !important;
+  }
 }
 
 @media screen and (max-width: 520px) {
@@ -580,4 +590,19 @@ a {
 
 .page:hover {
   cursor:default;
+}
+
+.error-msg {
+  position: absolute;
+  z-index: 100;
+  background:rgba(231, 210, 107, 0.797);
+  border-radius: 12px;
+  padding: 5px;
+  transform: translateY(-670%);
+  max-width: 898px;
+  width: 95%;
+}
+
+.error {
+  height: 20px;
 }
