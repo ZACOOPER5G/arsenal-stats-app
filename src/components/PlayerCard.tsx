@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { ReactNode, useEffect, useState } from 'react';
 import playerData from '../data/players.json';
+import { LimitMessage } from './LimitMessage';
 
 interface PlayerCardStats {
     [name: string] : ReactNode;
@@ -9,6 +10,7 @@ interface PlayerCardStats {
 export const PlayerCard = (props: any) => {
     const [playerStats, setPlayerStats] = useState<PlayerCardStats>({});
     const [isGK, setIsGK] = useState<boolean>(false);
+    const [limit, setLimit] = useState<boolean>(false)
 
     // retrieves player object
     let playerObj = playerData.find(item => {
@@ -50,6 +52,9 @@ export const PlayerCard = (props: any) => {
         })
         .catch(err => {
             console.log(err)
+            if (err.response.status === 429) {
+                setLimit(true)
+            }
         })
     };
 
@@ -63,6 +68,10 @@ export const PlayerCard = (props: any) => {
             if (!isGK && props.page === 1) {
               return (
                 <div className="card">
+                    {limit && 
+                    <>
+                        <LimitMessage />
+                    </>}
                     <div className="player">
                         <img src={playerImg} alt={playerName} className={playerName} />
                     </div>
