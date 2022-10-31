@@ -54,7 +54,7 @@ export const PlayerCard = (props: any) => {
     };
 
     useEffect(() => {
-        getPlayerData()
+        getPlayerData();
     }, [props.player]);
 
     return (
@@ -92,31 +92,31 @@ export const PlayerCard = (props: any) => {
                         </div>
                         <div className='group'>
                             <h3 className="label">Goals</h3>
-                            <span className="description">{playerStats.goals === null || !playerStats.appearances  ? "0" : playerStats.goals}</span>
+                            <span className="description">{!playerStats.goals ? "N/A" : playerStats.goals}</span>
                         </div>
                         <div className='group'>
                             <h3 className="label">Assists</h3>
-                            <span className="description">{playerStats.assists === null || !playerStats.appearances ? '0' : playerStats.assists}</span>
+                            <span className="description">{!playerStats.assists ? 'N/A' : playerStats.assists}</span>
                         </div>
                         <div className='group'>
                             <h3 className="label">Appearances</h3>
-                            <span className="description">{playerStats.appearances === null || !playerStats.appearances ? '0' : playerStats.appearances}</span>
+                            <span className="description">{!playerStats.appearances ? 'N/A' : playerStats.appearances}</span>
                         </div>
                         <div className='group'>
                             <h3 className="label">Matches Started</h3>
-                            <span className="description">{playerStats.matchesStarted === null || !playerStats.matchesStarted ? '0' : playerStats.matchesStarted}</span>
+                            <span className="description">{!playerStats.matchesStarted ? 'N/A' : playerStats.matchesStarted}</span>
                         </div>
                         <div className='group'>
                             <h3 className="label">Goals/Assists</h3>
-                            <span className="description">{playerStats.goalsAssistsSum === null || !playerStats.goalsAssistsSum ? '0' : playerStats.goalsAssistsSum}</span>
+                            <span className="description">{!playerStats.goalsAssistsSum ? 'N/A' : playerStats.goalsAssistsSum}</span>
                         </div>
                         <div className='group'>
                             <h3 className="label">Minutes Played</h3>
-                            <span className="description">{playerStats.minutesPlayed === null || !playerStats.minutesPlayed ? '0' : playerStats.minutesPlayed}</span>
+                            <span className="description">{!playerStats.minutesPlayed ? 'N/A' : playerStats.minutesPlayed}</span>
                         </div>
                         <div className='group'>
                             <h3 className="label">Key Passes</h3>
-                            <span className="description">{playerStats.keyPasses === null || !playerStats.keyPasses ? '0' : playerStats.keyPasses}</span>
+                            <span className="description">{!playerStats.keyPasses ? 'N/A' : playerStats.keyPasses}</span>
                         </div>
                     </div>
                 </div>
@@ -153,15 +153,15 @@ export const PlayerCard = (props: any) => {
                         </div>
                         <div className='group'>
                             <h3 className="label">Appearances</h3>
-                            <span className="description">{playerStats.appearances === null || !playerStats.appearances ? '0' : playerStats.appearances}</span>
+                            <span className="description">{!playerStats.appearances ? 'N/A' : playerStats.appearances}</span>
                         </div>
                         <div className='group'>
                             <h3 className="label">Matches Started</h3>
-                            <span className="description">{playerStats.appearances === null || !playerStats.appearances ? '0' : playerStats.appearances}</span>
+                            <span className="description">{!playerStats.appearances ? 'N/A' : playerStats.appearances}</span>
                         </div>
                         <div className='group'>
                             <h3 className="label">Minutes Played</h3>
-                            <span className="description">{playerStats.minutesPlayed === null || !playerStats.minutesPlayed ? '0' : playerStats.minutesPlayed}</span>
+                            <span className="description">{!playerStats.minutesPlayed ? 'N/A' : playerStats.minutesPlayed}</span>
                         </div>
                     </div>
                 </div>
@@ -178,38 +178,38 @@ export const PlayerCard = (props: any) => {
                       <div className="stats-container" >
                       <div className='group'>
                             <h3 className="label">Clean Sheets</h3>
-                            <span className="description">{playerStats.cleanSheet === null || !playerStats.cleanSheet ? '0' : playerStats.cleanSheet}</span>
+                            <span className="description">{!playerStats.cleanSheet ? 'N/A' : playerStats.cleanSheet}</span>
                         </div>
                         <div className='group'>
                             <h3 className="label">Saves</h3>
-                            <span className="description">{playerStats.saves === null || !playerStats.saves ? '0' : playerStats.saves}</span>
+                            <span className="description">{!playerStats.saves ? 'N/A' : playerStats.saves}</span>
                         </div>
                         <div className='group'>
                             <h3 className="label">Clearances</h3>
-                            <span className="description">{playerStats.clearances === null || !playerStats.clearances ? '0' : playerStats.clearances}</span>
+                            <span className="description">{!playerStats.clearances ? 'N/A' : playerStats.clearances}</span>
                         </div>
                         <div className='group'>
                             <h3 className="label">Rating</h3>
                             {/* @ts-ignore */}
-                            <span className="description">{playerStats.rating === null || !playerStats.rating ? '0' : Math.round(playerStats.rating).toFixed(2)}</span>
+                            <span className="description">{!playerStats.rating ? 'N/A' : Math.round(playerStats.rating).toFixed(2)}</span>
                         </div>
                         <div className='group'>
                             <h3 className="label">Touches</h3>
-                            <span className="description">{playerStats.touches === null || !playerStats.touches ? '0' : playerStats.touches}</span>
+                            <span className="description">{!playerStats.touches ? 'N/A' : playerStats.touches}</span>
                         </div>
                         <div className='group'>
                             <h3 className="label">Total Passes</h3>
-                            <span className="description">{playerStats.totalPasses === null || !playerStats.totalPasses ? '0' : playerStats.totalPasses}</span>
+                            <span className="description">{!playerStats.totalPasses ? 'N/A' : playerStats.totalPasses}</span>
                         </div>
                         <div className='group'>
                             <h3 className="label">Accurate Pass %</h3>
                             {/* @ts-ignore */}
-                            <span className="description">{playerStats.accuratePasses === null || !playerStats.accuratePasses ? '0%' : Math.floor(playerStats.accuratePasses) + '%'}</span>
+                            <span className="description">{playerStats.accuratePasses ? 'N/A%' : Math.floor(playerStats.accuratePasses) + '%'}</span>
                         </div>
                         <div className='group'>
                             <h3 className="label">Accurated Long Ball %</h3>
                             {/* @ts-ignore */}
-                            <span className="description">{playerStats.accurateLongBallsPercentage === null || !playerStats.accurateLongBallsPercentage ? '0%' : `${Math.floor(playerStats.accurateLongBallsPercentage)}%`}</span>
+                            <span className="description">{!playerStats.accurateLongBallsPercentage ? 'N/A%' : `${Math.floor(playerStats.accurateLongBallsPercentage)}%`}</span>
                         </div>
                     </div>
                 </div>
@@ -226,35 +226,35 @@ export const PlayerCard = (props: any) => {
                       <div className="stats-container" >
                       <div className='group'>
                             <h3 className="label">Saves Caught</h3>
-                            <span className="description">{playerStats.savesCaught === null || !playerStats.savesCaught ? '0' : playerStats.savesCaught}</span>
+                            <span className="description">{!playerStats.savesCaught ? 'N/A' : playerStats.savesCaught}</span>
                         </div>
                         <div className='group'>
                             <h3 className="label">Saves Parried</h3>
-                            <span className="description">{playerStats.savesParried === null || !playerStats.savesParried ? '0' : playerStats.savesParried}</span>
+                            <span className="description">{!playerStats.savesParried ? 'N/A' : playerStats.savesParried}</span>
                         </div>
                         <div className='group'>
                             <h3 className="label">Saves Shots From Inside Box</h3>
-                            <span className="description">{playerStats.savedShotsFromInsideTheBox === null || !playerStats.savedShotsFromInsideTheBox ? '0' : playerStats.savedShotsFromInsideTheBox}</span>
+                            <span className="description">{!playerStats.savedShotsFromInsideTheBox ? 'N/A' : playerStats.savedShotsFromInsideTheBox}</span>
                         </div>
                         <div className='group'>
                             <h3 className="label">Saves Shots From Outside Box</h3>
-                            <span className="description">{playerStats.savedShotsFromOutsideTheBox === null || !playerStats.savedShotsFromOutsideTheBox ? '0' : playerStats.savedShotsFromOutsideTheBox}</span>
+                            <span className="description">{!playerStats.savedShotsFromOutsideTheBox ? 'N/A' : playerStats.savedShotsFromOutsideTheBox}</span>
                         </div>
                         <div className='group'>
                             <h3 className="label">Punches</h3>
-                            <span className="description">{playerStats.punches === null || !playerStats.punches ? '0' : playerStats.punches}</span>
+                            <span className="description">{!playerStats.punches ? 'N/A' : playerStats.punches}</span>
                         </div>
                         <div className='group'>
                             <h3 className="label">Penalties Faced</h3>
-                            <span className="description">{playerStats.penaltyFaced === null || !playerStats.penaltyFaced ? '0' : playerStats.penaltyFaced}</span>
+                            <span className="description">{!playerStats.penaltyFaced ? 'N/A' : playerStats.penaltyFaced}</span>
                         </div>
                         <div className='group'>
                             <h3 className="label">Penalties Saved</h3>
-                            <span className="description">{playerStats.penaltySave === null || !playerStats.penaltySave ? '0' : `${playerStats.penaltySave}`}</span>
+                            <span className="description">{!playerStats.penaltySave ? 'N/A' : `${playerStats.penaltySave}`}</span>
                         </div>
                         <div className='group'>
                             <h3 className="label">Penalties Conceded</h3>
-                            <span className="description">{playerStats.penaltyConceded === null || !playerStats.penaltyConceded ? '0' : `${playerStats.penaltyConceded}`}</span>
+                            <span className="description">{!playerStats.penaltyConceded ? 'N/A' : `${playerStats.penaltyConceded}`}</span>
                         </div>
                     </div>
                 </div>
@@ -271,35 +271,35 @@ export const PlayerCard = (props: any) => {
                       <div className="stats-container" >
                       <div className='group'>
                             <h3 className="label">Goals Conceded</h3>
-                            <span className="description">{playerStats.goalsConceded === null || !playerStats.goalsConceded ? '0' : playerStats.goalsConceded}</span>
+                            <span className="description">{!playerStats.goalsConceded ? 'N/A' : playerStats.goalsConceded}</span>
                         </div>
                         <div className='group'>
                             <h3 className="label">Goals Conceded Inside the Box</h3>
-                            <span className="description">{playerStats.goalsConcededInsideTheBox === null || !playerStats.goalsConcededInsideTheBox ? '0' : playerStats.goalsConcededInsideTheBox}</span>
+                            <span className="description">{!playerStats.goalsConcededInsideTheBox ? 'N/A' : playerStats.goalsConcededInsideTheBox}</span>
                         </div>
                         <div className='group'>
                             <h3 className="label">Goals Conceded Outside the Boox</h3>
-                            <span className="description">{playerStats.goalsConcededOutsideTheBox === null || !playerStats.goalsConcededOutsideTheBox ? '0' : playerStats.goalsConcededOutsideTheBox}</span>
+                            <span className="description">{!playerStats.goalsConcededOutsideTheBox ? 'N/A' : playerStats.goalsConcededOutsideTheBox}</span>
                         </div>
                         <div className='group'>
                             <h3 className="label">High Claims</h3>
-                            <span className="description">{playerStats.highClaims === null || !playerStats.highClaims ? '0' : playerStats.highClaims}</span>
+                            <span className="description">{!playerStats.highClaims ? 'N/A' : playerStats.highClaims}</span>
                         </div>
                         <div className='group'>
                             <h3 className="label">Crosses Not Claimed</h3>
-                            <span className="description">{playerStats.crossesNotClaimed === null || !playerStats.crossesNotClaimed ? '0' : playerStats.crossesNotClaimed}</span>
+                            <span className="description">{!playerStats.crossesNotClaimed ? 'N/A' : playerStats.crossesNotClaimed}</span>
                         </div>
                         <div className='group'>
                             <h3 className="label">Errors Leading to Goals</h3>
-                            <span className="description">{playerStats.errorLeadToGoal === null || !playerStats.errorLeadToGoal ? '0' : playerStats.errorLeadToGoal}</span>
+                            <span className="description">{!playerStats.errorLeadToGoal ? 'N/A' : playerStats.errorLeadToGoal}</span>
                         </div>
                         <div className='group'>
                             <h3 className="label">Errors Leading to Shots</h3>
-                            <span className="description">{playerStats.errorLeadToShot === null || !playerStats.errorLeadToShot ? '0' : `${playerStats.errorLeadToShot}`}</span>
+                            <span className="description">{!playerStats.errorLeadToShot ? 'N/A' : `${playerStats.errorLeadToShot}`}</span>
                         </div>
                         <div className='group'>
                             <h3 className="label">TOTW Appearances</h3>
-                            <span className="description">{playerStats.totwAppearances === null || !playerStats.totwAppearances ? '0' : `${playerStats.totwAppearances}`}</span>
+                            <span className="description">{!playerStats.totwAppearances ? 'N/A' : `${playerStats.totwAppearances}`}</span>
                         </div>
                     </div>
                 </div>
@@ -317,54 +317,54 @@ export const PlayerCard = (props: any) => {
                         <div className="group">
                             <h3 className="label">Rating</h3>
                             {/* @ts-ignore */}
-                            <span className="description">{playerStats.rating === null || !playerStats.rating ? "0" : Math.round(playerStats.rating).toFixed(2)}</span>
+                            <span className="description">{!playerStats.rating ? "N/A" : Math.round(playerStats.rating).toFixed(2)}</span>
                         </div>
                         <div className='group'>
                             <h3 className="label">Shots On Target</h3>
-                            <span className="description">{playerStats.shotsOnTarget === null || !playerStats.shotsOnTarget ? "0" : playerStats.shotsOnTarget}</span>
+                            <span className="description">{!playerStats.shotsOnTarget ? "N/A" : playerStats.shotsOnTarget}</span>
                         </div>
                         <div className='group'>
                             <h3 className="label">Shots Off Target</h3>
-                            <span className="description">{playerStats.shotsOffTarget === null || !playerStats.shotsOffTarget ? "0" : playerStats.shotsOffTarget}</span>
+                            <span className="description">{!playerStats.shotsOffTarget ? "N/A" : playerStats.shotsOffTarget}</span>
                         </div>
                         <div className='group'>
                             <h3 className="label">Successful Dribbles</h3>
-                            <span className="description">{playerStats.successfulDribbles === null || !playerStats.successfulDribbles ? "0" : playerStats.successfulDribbles}</span>
+                            <span className="description">{!playerStats.successfulDribbles ? "N/A" : playerStats.successfulDribbles}</span>
                         </div>
                         <div className='group'>
                             <h3 className="label">Successful Dribble %</h3>
                             {/* @ts-ignore */}
-                            <span className="description">{playerStats.successfulDribblesPercentage === null || !playerStats.successfulDribblesPercentage ? "0%" : `${Math.floor(playerStats.successfulDribblesPercentage)}%`}</span>
+                            <span className="description">{!playerStats.successfulDribblesPercentage ? "N/A%" : `${Math.floor(playerStats.successfulDribblesPercentage)}%`}</span>
                         </div>
                         <div className='group'>
                             <h3 className="label">TOTW Appearances</h3>
-                            <span className="description">{playerStats.totwAppearances === null || !playerStats.totwAppearances  ? "0" : playerStats.totwAppearances}</span>
+                            <span className="description">{!playerStats.totwAppearances ? "N/A" : playerStats.totwAppearances}</span>
                         </div>
                         <div className='group'>
                             <h3 className="label">Total Passes</h3>
-                            <span className="description">{playerStats.totalPasses === null || !playerStats.totalPasses ? '0' : playerStats.totalPasses}</span>
+                            <span className="description">{!playerStats.totalPasses ? 'N/A' : playerStats.totalPasses}</span>
                         </div>
                         <div className='group'>
                             <h3 className="label">Accurate Pass %</h3>
                             {/* @ts-ignore */}
-                            <span className="description">{playerStats.accuratePassesPercentage === null || !playerStats.accuratePassesPercentage ? '0%' : `${Math.floor(playerStats.accuratePassesPercentage)}%`}</span>
+                            <span className="description">{!playerStats.accuratePassesPercentage ? 'N/A%' : `${Math.floor(playerStats.accuratePassesPercentage)}%`}</span>
                         </div>
                         <div className='group'>
                             <h3 className="label">Total Long Balls</h3>
-                            <span className="description">{playerStats.totalLongBalls === null || !playerStats.totalLongBalls ? '0' : playerStats.totalLongBalls}</span>
+                            <span className="description">{!playerStats.totalLongBalls ? 'N/A' : playerStats.totalLongBalls}</span>
                         </div>
                         <div className='group'>
                             <h3 className="label">Accurate Long Ball %</h3>
                             {/* @ts-ignore */}
-                            <span className="description">{playerStats.accurateLongBallsPercentage === null || !playerStats.accurateLongBallsPercentage ? '0%' : `${Math.floor(playerStats.accurateLongBallsPercentage)}%`}</span>
+                            <span className="description">{!playerStats.accurateLongBallsPercentage ? 'N/A%' : `${Math.floor(playerStats.accurateLongBallsPercentage)}%`}</span>
                         </div>
                         <div className='group'>
                             <h3 className="label">Big Chances Created</h3>
-                            <span className="description">{playerStats.bigChancesCreated === null || !playerStats.bigChancesCreated ? '0' : playerStats.bigChancesCreated}</span>
+                            <span className="description">{!playerStats.bigChancesCreated ? 'N/A' : playerStats.bigChancesCreated}</span>
                         </div>
                         <div className='group'>
                             <h3 className="label">Big Chances Missed</h3>
-                            <span className="description">{playerStats.bigChancesMissed === null || !playerStats.bigChancesMissed ? '0' : playerStats.bigChancesMissed}</span>
+                            <span className="description">{!playerStats.bigChancesMissed ? 'N/A' : playerStats.bigChancesMissed}</span>
                         </div>
                     </div>
                 </div>
@@ -381,52 +381,52 @@ export const PlayerCard = (props: any) => {
                       <div className="stats-container" >
                           <div className="group">
                               <h3 className="label">Total Opposition Half Passes</h3>
-                              <span className="description">{playerStats.totalOppositionHalfPasses === null || !playerStats.totalOppositionHalfPasses ? "0" : playerStats.totalOppositionHalfPasses}</span>
+                              <span className="description">{!playerStats.totalOppositionHalfPasses ? "N/A" : playerStats.totalOppositionHalfPasses}</span>
                           </div>
                           <div className='group'>
                               <h3 className="label">Accurate Oppositional Half Passes</h3>
-                              <span className="description">{playerStats.accurateOppositionHalfPasses === null || !playerStats.accurateOppositionHalfPasses ? "0" : playerStats.accurateOppositionHalfPasses}</span>
+                              <span className="description">{!playerStats.accurateOppositionHalfPasses ? "N/A" : playerStats.accurateOppositionHalfPasses}</span>
                           </div>
                           <div className='group'>
                               <h3 className="label">Total Own Half Passes</h3>
-                              <span className="description">{playerStats.totalOwnHalfPasses === null || !playerStats.totalOwnHalfPasses ? "0" : playerStats.totalOwnHalfPasses}</span>
+                              <span className="description">{!playerStats.totalOwnHalfPasses ? "N/A" : playerStats.totalOwnHalfPasses}</span>
                           </div>
                           <div className='group'>
                               <h3 className="label">Accurate Own Half Passes</h3>
-                              <span className="description">{playerStats.accurateOwnHalfPasses === null || !playerStats.accurateOwnHalfPasses ? "0" : playerStats.accurateOwnHalfPasses}</span>
+                              <span className="description">{!playerStats.accurateOwnHalfPasses ? "N/A" : playerStats.accurateOwnHalfPasses}</span>
                           </div>
                           <div className='group'>
                               <h3 className="label">Accurate Final Third Passes</h3>
-                              <span className="description">{playerStats.accurateFinalThirdPasses === null || !playerStats.accurateFinalThirdPasses ? "0" : playerStats.accurateFinalThirdPasses}</span>
+                              <span className="description">{!playerStats.accurateFinalThirdPasses ? "N/A" : playerStats.accurateFinalThirdPasses}</span>
                           </div>
                           <div className='group'>
                               <h3 className="label">Total Cross Attempts</h3>
-                              <span className="description">{playerStats.totalCross === null || !playerStats.totalCross  ? "0" : playerStats.totalCross}</span>
+                              <span className="description">{!playerStats.totalCross  ? "N/A" : playerStats.totalCross}</span>
                           </div>
                           <div className='group'>
                               <h3 className="label">Accurate Crosses</h3>
-                              <span className="description">{playerStats.accurateCrosses === null || !playerStats.accurateCrosses ? '0' : playerStats.accurateCrosses}</span>
+                              <span className="description">{!playerStats.accurateCrosses ? 'N/A' : playerStats.accurateCrosses}</span>
                           </div>
                           <div className='group'>
                               <h3 className="label">Accurate Cross %</h3>
                               {/* @ts-ignore */}
-                              <span className="description">{playerStats.accurateCrossesPercentage === null || !playerStats.accurateCrossesPercentage ? '0%' : `${Math.floor(playerStats.accurateCrossesPercentage)}%`}</span>
+                              <span className="description">{!playerStats.accurateCrossesPercentage ? 'N/A%' : `${Math.floor(playerStats.accurateCrossesPercentage)}%`}</span>
                           </div>
                           <div className='group'>
                               <h3 className="label">Total Long Balls</h3>
-                              <span className="description">{playerStats.totalLongBalls === null || !playerStats.totalLongBalls ? '0' : playerStats.totalLongBalls}</span>
+                              <span className="description">{!playerStats.totalLongBalls ? 'N/A' : playerStats.totalLongBalls}</span>
                           </div>
                           <div className='group'>
                               <h3 className="label">Pass to Assist</h3>
-                              <span className="description">{playerStats.passToAssist === null || !playerStats.passToAssist ? '0' : playerStats.passToAssist}</span>
+                              <span className="description">{!playerStats.passToAssist ? 'N/A' : playerStats.passToAssist}</span>
                           </div>
                           <div className='group'>
                               <h3 className="label">Touches</h3>
-                              <span className="description">{playerStats.touches === null || !playerStats.touches ? '0' : playerStats.touches}</span>
+                              <span className="description">{!playerStats.touches ? 'N/A' : playerStats.touches}</span>
                           </div>
                           <div className='group'>
                               <h3 className="label">Possession Lost</h3>
-                              <span className="description">{playerStats.possessionLost === null || !playerStats.possessionLost ? '0' : playerStats.possessionLost}</span>
+                              <span className="description">{!playerStats.possessionLost ? 'N/A' : playerStats.possessionLost}</span>
                           </div>
                       </div>
                   </div>
@@ -443,55 +443,55 @@ export const PlayerCard = (props: any) => {
                       <div className="stats-container" >
                           <div className="group">
                               <h3 className="label">Clean Sheets</h3>
-                              <span className="description">{playerStats.cleanSheet === null || !playerStats.cleanSheet ? "0" : playerStats.cleanSheet}</span>
+                              <span className="description">{!playerStats.cleanSheet ? "N/A" : playerStats.cleanSheet}</span>
                           </div>
                           <div className='group'>
                               <h3 className="label">Clearances</h3>
-                              <span className="description">{playerStats.clearances === null || !playerStats.clearances ? "0" : playerStats.clearances}</span>
+                              <span className="description">{!playerStats.clearances ? "N/A" : playerStats.clearances}</span>
                           </div>
                           <div className='group'>
                               <h3 className="label">Blocked Shots</h3>
-                              <span className="description">{playerStats.blockedShots === null || !playerStats.blockedShots ? "0" : playerStats.blockedShots}</span>
+                              <span className="description">{!playerStats.blockedShots ? "N/A" : playerStats.blockedShots}</span>
                           </div>
                           <div className='group'>
                               <h3 className="label">Tackles Attempted</h3>
-                              <span className="description">{playerStats.tackles === null || !playerStats.tackles ? "0" : playerStats.tackles}</span>
+                              <span className="description">{!playerStats.tackles ? "N/A" : playerStats.tackles}</span>
                           </div>
                           <div className='group'>
                               <h3 className="label">Tackles Won</h3>
-                              <span className="description">{playerStats.tacklesWon === null || !playerStats.tacklesWon ? "0" : playerStats.tacklesWon}</span>
+                              <span className="description">{!playerStats.tacklesWon ? "N/A" : playerStats.tacklesWon}</span>
                           </div>
                           <div className='group'>
                               <h3 className="label">Tackle Win %</h3>
                                 {/* @ts-ignore */}
-                              <span className="description">{playerStats.tacklesWonPercentage === null || !playerStats.tacklesWonPercentage  ? "0%" : `${Math.floor(playerStats.tacklesWonPercentage)}%`}</span>
+                              <span className="description">{!playerStats.tacklesWonPercentage  ? "N/A%" : `${Math.floor(playerStats.tacklesWonPercentage)}%`}</span>
                           </div>
                           <div className='group'>
                               <h3 className="label">Duels Won</h3>
-                              <span className="description">{playerStats.totalDuelsWon === null || !playerStats.totalDuelsWon ? '0' : playerStats.totalDuelsWon}</span>
+                              <span className="description">{!playerStats.totalDuelsWon ? 'N/A' : playerStats.totalDuelsWon}</span>
                           </div>
                           <div className='group'>
                               <h3 className="label">Duel Win %</h3>
                                 {/* @ts-ignore */}
-                              <span className="description">{playerStats.totalDuelsWonPercentage === null || !playerStats.totalDuelsWonPercentage ? '0%' : `${Math.floor(playerStats.totalDuelsWonPercentage)}%`}</span>
+                              <span className="description">{!playerStats.totalDuelsWonPercentage ? 'N/A%' : `${Math.floor(playerStats.totalDuelsWonPercentage)}%`}</span>
                           </div>
                           <div className='group'>
                               <h3 className="label">Duels Lost</h3>
-                              <span className="description">{playerStats.duelLost === null || !playerStats.duelLost ? '0' : playerStats.duelLost}</span>
+                              <span className="description">{!playerStats.duelLost ? 'N/A' : playerStats.duelLost}</span>
                           </div>
                           <div className='group'>
                               <h3 className="label">Ground Duel Win %</h3>
                                  {/* @ts-ignore */}
-                              <span className="description">{playerStats.groundDuelsWonPercentage === null || !playerStats.groundDuelsWonPercentage ? '0%' : `${Math.floor(playerStats.groundDuelsWonPercentage)}%`}</span>
+                              <span className="description">{!playerStats.groundDuelsWonPercentage ? 'N/A%' : `${Math.floor(playerStats.groundDuelsWonPercentage)}%`}</span>
                           </div>
                           <div className='group'>
                               <h3 className="label">Ariel Duel Win %</h3>
                                  {/* @ts-ignore */}
-                              <span className="description">{playerStats.aerialDuelsWonPercentage === null || !playerStats.aerialDuelsWonPercentage ? '0%' : `${Math.floor(playerStats.aerialDuelsWonPercentage)}%`}</span>
+                              <span className="description">{!playerStats.aerialDuelsWonPercentage ? 'N/A%' : `${Math.floor(playerStats.aerialDuelsWonPercentage)}%`}</span>
                           </div>
                           <div className='group'>
                               <h3 className="label">Interceptions</h3>
-                              <span className="description">{playerStats.interceptions === null || !playerStats.interceptions ? '0' : playerStats.interceptions}</span>
+                              <span className="description">{!playerStats.interceptions ? 'N/A' : playerStats.interceptions}</span>
                           </div>
                       </div>
                   </div>
