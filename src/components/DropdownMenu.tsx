@@ -39,11 +39,13 @@ export const DropdownMenu = (props: any): any => {
         setMenuHeight(height)
     };
 
+    const handleClick = () => {
+        props.goToMenu && setActiveMenu(props.goToMenu);
+    }
+
     const DropdownItem = (props: any) => {
         return (
-            <a onClick={() => {
-                        props.goToMenu && setActiveMenu(props.goToMenu);
-                    }} 
+            <a onClick={handleClick} 
                     href="#" className="menu-item" 
                 >
                 <span 
