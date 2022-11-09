@@ -16,9 +16,13 @@ export const NavItem = (props: any) => {
         }
     }, []);
 
+    const handleClick = () => {
+      props.setMenu(!props.menu);
+    }
+
     return (
       <li className="nav-item" ref={menuRef} >
-          <a href="#" className="icon-button" onClick={() => props.setMenu(!props.menu)} >
+          <a href="#" className="icon-button" onClick={handleClick} >
               {props.icon}
           </a>
           {/* opens dropdown menu upon clicking chevron */}
