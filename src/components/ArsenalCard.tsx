@@ -54,7 +54,7 @@ export const ArsenalCard = () => {
                 <div className="stats-container" >
                     <div className="group">
                         <h3 className="label">Goals Leader</h3>
-                        <span className="description">{loading ? <ClipLoader loading={loading} size={15}/> : `${teamData?.topPlayers.goals['0'].player.shortName} (${teamData?.topPlayers.goals['0'].statistics.goals}`}</span>
+                        <span className="description">{loading ? <ClipLoader loading={loading} size={15}/> : `${teamData?.topPlayers.goals['0'].player.shortName} (${teamData?.topPlayers.goals['0'].statistics.goals})`}</span>
                     </div>
                     <div className='group'>
                         <h3 className="label">Assists Leader</h3>
