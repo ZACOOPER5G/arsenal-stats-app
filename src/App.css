@@ -60,12 +60,10 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
-  background-color: #DB0007;
   margin-top: auto;
   margin-bottom: auto;
   padding: 1rem;
-  transition: filter 300ms;
+
 }
 
 .icon-button {
@@ -88,6 +86,30 @@ a {
   clip-path: ellipse(50% 50% at 50% 0%);
 }
 
+.menu-button {
+  font-size: 12px;
+  border: 1px solid white;
+  width: 125px;
+  border-radius: 5px;
+  color: white;
+  background-color: #282c34;
+  padding: 5px 10px;
+  margin: 20px 0 !important;
+  cursor: pointer;
+}
+
+.menu-button:hover {
+  transform: translateX(2%) translateY(-2%);
+  background-color: #a0b1d2;
+  box-shadow: -2px 2px 5px #ccc;
+}
+
+.menu-button:active {
+  transform: translateX(0%) translateY(0%);
+  background-color: #282c34;
+  box-shadow: none;
+}
+
 .nav-item:hover {
   filter: brightness(1.2)
 }
@@ -105,7 +127,7 @@ a {
   max-height: 600px;
   transition: height 500ms ease;
   overflow: scroll;
-  z-index: 1;
+  z-index: 1000;
 }
 
 .dropdown::-webkit-scrollbar {
@@ -182,6 +204,7 @@ a {
 
 .card {
   width: 100% ;
+  background-image: url('https://svgsilh.com/svg/2673408.svg');
   max-width: 900px;
   padding: 20px;
   background: #191b21;
@@ -594,7 +617,7 @@ a {
 
 .error-msg {
   position: absolute;
-  z-index: 100;
+  z-index: 10;
   background:rgba(231, 210, 107, 0.797);
   border-radius: 12px;
   padding: 5px;

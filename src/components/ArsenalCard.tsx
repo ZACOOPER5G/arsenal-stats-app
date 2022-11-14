@@ -1,10 +1,13 @@
 import { useEffect, useState } from 'react';
 import ArsenalLogo from '../images/arsenal-logo.svg';
+import ClipLoader from "react-spinners/ClipLoader";
 
 export const ArsenalCard = () => {
     interface TeamDataProps {
         topPlayers: any
     }
+
+    const [loading, setLoading] = useState(false)
 
     const [teamData, setTeamData] = useState<TeamDataProps>()
 
@@ -20,12 +23,16 @@ export const ArsenalCard = () => {
     };
 
     const getTeamData = () => {
+        if (!loading) {
+            setLoading(true)
+        };
         axios.request(options)
         .then((res: any) => {
             setTeamData(res.data)
-            console.log(res.data)
+            setLoading(false)
         })
         .catch((err: any) => {
+            setLoading(false)
             console.log(err)
         })
     };
@@ -47,39 +54,39 @@ export const ArsenalCard = () => {
                 <div className="stats-container" >
                     <div className="group">
                         <h3 className="label">Goals Leader</h3>
-                        <span className="description">{teamData?.topPlayers.goals['0'].player.shortName} ({teamData?.topPlayers.goals['0'].statistics.goals})</span>
+                        <span className="description">{loading ? <ClipLoader loading={loading} size={15}/> : `${teamData?.topPlayers.goals['0'].player.shortName} (${teamData?.topPlayers.goals['0'].statistics.goals}`}</span>
                     </div>
                     <div className='group'>
                         <h3 className="label">Assists Leader</h3>
-                        <span className="description">{teamData?.topPlayers.assists['0'].player.shortName} ({teamData?.topPlayers.assists['0'].statistics.assists})</span>
+                        <span className="description">{loading ? <ClipLoader loading={loading} size={15}/> : `${teamData?.topPlayers.assists['0'].player.shortName} (${teamData?.topPlayers.assists['0'].statistics.assists})`}</span>
                     </div>
                     <div className='group'>
                         <h3 className="label">Goals/Assists Leader</h3>
-                        <span className="description">{teamData?.topPlayers.goalsAssistsSum['0'].player.shortName} ({teamData?.topPlayers.goalsAssistsSum['0'].statistics.goalsAssistsSum})</span>
+                        <span className="description">{loading ? <ClipLoader loading={loading} size={15}/> : `${teamData?.topPlayers.goalsAssistsSum['0'].player.shortName} (${teamData?.topPlayers.goalsAssistsSum['0'].statistics.goalsAssistsSum})`}</span>
                     </div>
                     <div className='group'>
                         <h3 className="label">Accurate Pass Leader</h3>
-                        <span className="description">{teamData?.topPlayers.accuratePasses['0'].player.shortName} ({teamData?.topPlayers.accuratePasses['0'].statistics.accuratePasses})</span>
+                        <span className="description">{loading ? <ClipLoader loading={loading} size={15}/> : `${teamData?.topPlayers.accuratePasses['0'].player.shortName} (${teamData?.topPlayers.accuratePasses['0'].statistics.accuratePasses})`}</span>
                     </div>
                     <div className='group'>
                         <h3 className="label">Ratings Leader</h3>
-                        <span className="description">{teamData?.topPlayers.rating['0'].player.shortName} ({teamData?.topPlayers.rating['0'].statistics.rating})</span>
+                        <span className="description">{loading ? <ClipLoader loading={loading} size={15}/> : `${teamData?.topPlayers.rating['0'].player.shortName} (${teamData?.topPlayers.rating['0'].statistics.rating})`}</span>
                     </div>
                     <div className='group'>
                         <h3 className="label">Tackles Leader</h3>
-                        <span className="description">{teamData?.topPlayers.tackles['0'].player.shortName} ({teamData?.topPlayers.tackles['0'].statistics.tackles})</span>
+                        <span className="description">{loading ? <ClipLoader loading={loading} size={15}/> : `${teamData?.topPlayers.tackles['0'].player.shortName} (${teamData?.topPlayers.tackles['0'].statistics.tackles})`}</span>
                     </div>
                     <div className='group'>
                         <h3 className="label">Key Passes Leader</h3>
-                        <span className="description">{teamData?.topPlayers.keyPasses['0'].player.shortName} ({teamData?.topPlayers.keyPasses['0'].statistics.keyPasses})</span>
+                        <span className="description">{loading ? <ClipLoader loading={loading} size={15}/> : `${teamData?.topPlayers.keyPasses['0'].player.shortName} (${teamData?.topPlayers.keyPasses['0'].statistics.keyPasses})`}</span>
                     </div>
                     <div className='group'>
                         <h3 className="label">Successful Dribbles Leader</h3>
-                        <span className="description">{teamData?.topPlayers.successfulDribbles['0'].player.shortName} ({teamData?.topPlayers.successfulDribbles['0'].statistics.successfulDribbles})</span>
+                        <span className="description">{loading ? <ClipLoader loading={loading} size={15}/> : `${teamData?.topPlayers.successfulDribbles['0'].player.shortName} (${teamData?.topPlayers.successfulDribbles['0'].statistics.successfulDribbles})`}</span>
                     </div>
                     <div className='group'>
                         <h3 className="label">Yellow Card Leader</h3>
-                        <span className="description">{teamData?.topPlayers.yellowCards['0'].player.shortName} ({teamData?.topPlayers.yellowCards['0'].statistics.yellowCards})</span>
+                        <span className="description">{loading ? <ClipLoader loading={loading} size={15}/> : `${teamData?.topPlayers.yellowCards['0'].player.shortName} (${teamData?.topPlayers.yellowCards['0'].statistics.yellowCards})`}</span>
                     </div>
                     <div className='group'>
                         <h3 className="label">Red Card Leader</h3>
