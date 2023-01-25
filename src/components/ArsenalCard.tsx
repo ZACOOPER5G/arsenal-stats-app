@@ -97,7 +97,11 @@ export const ArsenalCard = () => {
 							{loading ? (
 								<ClipLoader loading={loading} size={15} />
 							) : (
-								`${teamData?.topPlayers.rating["0"].player.shortName} (${teamData?.topPlayers.rating["0"].statistics.rating})`
+								<div>
+									{teamData?.topPlayers.rating[0].playedEnough
+										? `${teamData?.topPlayers.rating["0"]?.player.shortName} (${teamData?.topPlayers.rating["0"]?.statistics.rating})`
+										: `${teamData?.topPlayers.shotsOnTarget["1"]?.player.shortName} (${teamData?.topPlayers.rating["1"]?.statistics.rating})`}
+								</div>
 							)}
 						</span>
 					</div>
